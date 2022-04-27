@@ -38,6 +38,11 @@ module.exports = {
         subh: '0.875rem',
         caption: '.75rem',
       },
+      height: {
+        40: '2.5rem',
+        140: '8.75rem',
+      },
+      weight: {},
     },
   },
   plugins: [],
