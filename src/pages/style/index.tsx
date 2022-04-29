@@ -1,4 +1,4 @@
-import { Typography } from 'components'
+import { Typography, Button } from 'components'
 import Link from 'next/link'
 
 export default function In() {
@@ -14,6 +14,24 @@ export default function In() {
           </Typography>
         </a>
       </Link>
+      <div className='flex gap-2'>
+        <Button variant='fill'>
+          <Typography variant='body' className='text-white'>
+            Товчлуур
+          </Typography>
+        </Button>
+        <Button variant='ghost'>
+          <Typography variant='body' className='text-black-light'>
+            Товчлуур
+          </Typography>
+        </Button>
+        <Button variant='text'>
+          <Typography variant='body' className='text-black-light'>
+            Товчлуур
+          </Typography>
+        </Button>
+      </div>
+
     </div>
   )
 }
