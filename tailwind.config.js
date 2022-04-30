@@ -11,15 +11,10 @@ module.exports = {
           main: colors.primary.main,
           dark: colors.primary.dark,
         },
-        secondary: {
-          light: colors.secondary.light,
-          main: colors.secondary.main,
-          dark: colors.secondary.dark,
-        },
-        black: {
-          light: colors.black.light,
-          main: colors.black.main,
-          dark: colors.black.dark,
+        grey: {
+          g100: colors.grey.g100,
+          g200: colors.grey.g200,
+          g300: colors.grey.g300,
         },
         border: {
           grey: 'rgba(255, 255, 255, 0.2)',
