@@ -14,6 +14,13 @@ export default function In() {
           </Typography>
         </a>
       </Link>
+      <Link href={'/style/text'}>
+        <a>
+          <Typography variant="body-bold" className="text-primary-black hover:underline">
+            Go to the text page
+          </Typography>
+        </a>
+      </Link>
       <div className='flex gap-2'>
         <Button variant='fill'>
           <Typography variant='body' className='text-white'>
