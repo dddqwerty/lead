@@ -1,6 +1,5 @@
 import Typo from "components/typography";
 import { useEffect } from "react";
-import { ReactNode } from "react";
 import { useState } from "react";
 import { ReactElement } from "react";
 import { FC } from "react";
