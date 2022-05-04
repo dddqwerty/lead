@@ -18,8 +18,8 @@ export const Header = () => {
     } else setPhone(false)
   }
   return (
-    <div className="border-b fixed">
-      <div className="mx-auto max-w-7xl flex justify-between items-center  ">
+    <div className="border-b ">
+      <div className="mx-auto max-w-7xl flex justify-between items-center">
         <img
           onClick={() => handleChangeMenu('/')}
           src="/static/lead-logo.svg"
