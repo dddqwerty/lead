@@ -18,11 +18,11 @@ export const Header = () => {
     } else setPhone(false)
   }
   return (
-    <div className="border-b">
+    <div className="border-b fixed">
       <div className="mx-auto max-w-7xl flex justify-between items-center  ">
         <img
           onClick={() => handleChangeMenu('/')}
-          src="/static/logo.png"
+          src="/static/lead-logo.svg"
           alt=""
           className="flex h-40 w-140 mx-10 md:mx-auto hover:cursor-pointer md:flex "
         />
@@ -76,7 +76,7 @@ export const Header = () => {
             onClick={() => handleChangeMenu('result')}
             className={`${state === 'result' && 'border-b-4 border-primary-main'} py-[24px] hover:cursor-pointer `}
           >
-            <Typography variant="body">ШИЙД</Typography>
+            <Typography variant="body">Шийд</Typography>
           </div>
 
           <div
