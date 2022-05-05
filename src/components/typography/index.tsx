@@ -5,6 +5,7 @@ type Props = {
   variant: Variants
   className?: string
   children: React.ReactNode
+  onClick?: () => void
 }
 
 export const Typo: FC<Props> = (props): ReactElement => {

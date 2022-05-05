@@ -16,6 +16,7 @@ module.exports = {
           g200: colors.grey.g200,
           g300: colors.grey.g300,
         },
+        main: '#FFFFFF',
       },
       fontSize: {
         xs: '.75rem',
@@ -36,8 +37,25 @@ module.exports = {
       height: {
         40: '2.5rem',
         140: '8.75rem',
+        20: '1.25rem',
       },
-      weight: {},
+      width: {
+        140: '8.75rem',
+        20: '1.25rem',
+        40: '2.5rem',
+      },
+      s: {
+        grey: 'rgba(255, 255, 255, 0.2)',
+      },
+      lineHeight: {
+        18: '1.125rem',
+      },
+      backgroundColor: {
+        grey: 'rgba(255, 255, 255, 0.2)',
+      },
+      zIndex: {
+        1: '1',
+      },
     },
   },
   plugins: [],
