@@ -22,6 +22,7 @@ module.exports = {
         border: {
           grey: 'rgba(255, 255, 255, 0.2)',
         },
+        blackLgiht: '#0F233E',
         main: '#FFFFFF',
       },
       fontSize: {

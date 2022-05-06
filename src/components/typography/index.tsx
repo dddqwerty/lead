@@ -27,9 +27,9 @@ export const Typo: FC<Props> = (props): ReactElement => {
       case 'body':
         return 'font-normal font-sans-pro text-body'
       case 'subhead':
-        return 'font-normal text-subh'
+        return 'font-normal font-sans-pro text-subh'
       case 'caption':
-        return 'font-normal text-caption'
+        return 'font-normal font-sans-pro text-caption'
       default:
         return ''
     }
