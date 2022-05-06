@@ -5,10 +5,11 @@ type Props = {
   variant: Variants
   className?: string
   children: React.ReactNode
+  onClick?: () => void
 }
 
 export const Typo: FC<Props> = (props): ReactElement => {
-  const { variant, className = '', children } = props
+  const { variant, className = '', children , onClick} = props
 
   const getClasses = (variant: Variants) => {
     switch (variant) {
@@ -35,7 +36,7 @@ export const Typo: FC<Props> = (props): ReactElement => {
     }
   }
 
-  return <div className={`${getClasses(variant)} ${className}`}> {children} </div>
+  return <div className={`${getClasses(variant)} ${className}`} onClick={onClick}> {children} </div>
 }
 
 export default Typo
