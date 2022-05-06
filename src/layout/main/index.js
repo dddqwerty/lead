@@ -1,11 +1,11 @@
 import { Header } from './header'
 import { Footer } from './footer'
 
-export const MainLayout = ({ children }) => {
+export const MainLayout = ({ children, classname }) => {
   return (
     <>
       <Header />
-      {children}
+      <main className={`relative w-full  min-h-screen ${classname}`}>{children}</main>
       <Footer />
     </>
   )

@@ -5,6 +5,9 @@ module.exports = {
   important: true,
   theme: {
     extend: {
+      maxWidth: {
+        leadScreen: '1224px',
+      },
       colors: {
         primary: {
           light: colors.primary.light,
@@ -46,6 +49,9 @@ module.exports = {
         140: '8.75rem',
         20: '1.25rem',
         40: '2.5rem',
+      },
+      fontFamily: {
+        'sans-pro': 'Source Sans Pro, sans-serif',
       },
       // s: {
       //   grey: 'rgba(255, 255, 255, 0.2)',
