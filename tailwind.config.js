@@ -5,6 +5,9 @@ module.exports = {
   important: true,
   theme: {
     extend: {
+      maxWidth: {
+        leadScreen: '1224px',
+      },
       colors: {
         primary: {
           light: colors.primary.light,
