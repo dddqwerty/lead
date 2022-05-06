@@ -19,9 +19,6 @@ module.exports = {
           g200: colors.grey.g200,
           g300: colors.grey.g300,
         },
-        border: {
-          grey: 'rgba(255, 255, 255, 0.2)',
-        },
         main: '#FFFFFF',
       },
       fontSize: {
@@ -50,21 +47,18 @@ module.exports = {
         20: '1.25rem',
         40: '2.5rem',
       },
-      fontFamily: {
-        'sans-pro': 'Source Sans Pro, sans-serif',
+      s: {
+        grey: 'rgba(255, 255, 255, 0.2)',
       },
-      // s: {
-      //   grey: 'rgba(255, 255, 255, 0.2)',
-      // },
-      // lineHeight: {
-      //   18: '1.125rem',
-      // },
-      // backgroundColor: {
-      //   grey: 'rgba(255, 255, 255, 0.2)',
-      // },
-      // zIndex: {
-      //   1: '1',
-      // },
+      lineHeight: {
+        18: '1.125rem',
+      },
+      backgroundColor: {
+        grey: 'rgba(255, 255, 255, 0.2)',
+      },
+      zIndex: {
+        1: '1',
+      },
     },
   },
   plugins: [],

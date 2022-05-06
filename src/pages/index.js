@@ -1,9 +1,9 @@
-import { MainLayout } from 'layout'
+import Typo from 'components/typography'
 
 export default function Home() {
   return (
-    <MainLayout classname={'mx-auto max-w-leadScreen'}>
-      <div>ewqedwqdqwdqwwqewqeqw</div>
-    </MainLayout>
+    <Typo variant="h1" className="text-primary-light">
+      Hello
+    </Typo>
   )
 }

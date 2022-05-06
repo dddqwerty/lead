@@ -32,10 +32,6 @@ export const Footer = () => {
         <Typography variant="subhead" className="text-center">
           © Зохиогчийн бүх эрх Нэст Академид <br /> харьяалагдана. 2022 он
         </Typography>
-        {/* <div className="w-[296px] h-[36px] text-center leading-18 text-subh">
-
-          
-        </div> */}
       </div>
     </footer>
   )
