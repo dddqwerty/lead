@@ -1,4 +1,5 @@
 const colors = require('./src/theme/colors')
+const defaultTheme = require('tailwindcss/defaultTheme')
 
 module.exports = {
   content: ['./src/**/**/*.{js,ts,jsx,tsx}'],
@@ -50,8 +51,10 @@ module.exports = {
         140: '8.75rem',
         20: '1.25rem',
         40: '2.5rem',
+        496: '496px',
       },
       fontFamily: {
+        sans: ['Montserrat', ...defaultTheme.fontFamily.sans],
         'sans-pro': 'Source Sans Pro, sans-serif',
       },
       // s: {
