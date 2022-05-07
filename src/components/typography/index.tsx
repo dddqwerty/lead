@@ -14,7 +14,7 @@ export const Typo: FC<Props> = (props): ReactElement => {
   const getClasses = (variant: Variants) => {
     switch (variant) {
       case 'h1':
-        return 'font-extrabold text-h1'
+        return 'font-extrabold text-h1 leading-[53px]'
       case 'h2':
         return 'font-bold text-h2'
       case 'h3':
