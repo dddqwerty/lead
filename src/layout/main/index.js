@@ -5,7 +5,7 @@ export const MainLayout = ({ children, classname }) => {
   return (
     <>
       <Header />
-      <main className={`relative w-full  min-h-screen ${classname}`}>{children}</main>
+      <main className={`relative w-full ${classname}`}>{children}</main>
       <Footer />
     </>
   )
