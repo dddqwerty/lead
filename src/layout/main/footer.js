@@ -6,7 +6,7 @@ export const Footer = () => {
     <footer className="bg-blackLgiht flex justify-center text-white pb-[16.25px] pt-[77.75px]">
       <div className="mx-auto max-w-leadScreen w-screen flex flex-col gap-[40px] overflow-hidden">
         <div className="w-full justify-center flex">
-          <img src="static/lead-white-logo.svg" className="w-[140px]"></img>
+          <img src="/static/lead-white-logo.svg" className="w-[140px]"></img>
         </div>
         <div className="flex w-full justify-center relative gap-[24px]">
           <div className="h-[40px] w-[40px] items-center justify-center flex border-border-grey border-solid border rounded-full z-10 bg-blackLgiht">

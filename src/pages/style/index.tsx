@@ -46,6 +46,13 @@ export default function In() {
         </Button>
       </div>
 
+      <Link href={'/style/land'}>
+        <a>
+          <Typography variant="body-bold" className="text-primary-black hover:underline">
+            Go to Animation
+          </Typography>
+        </a>
+      </Link>
     </div>
   )
 }
