@@ -24,7 +24,7 @@ export const Typo: FC<Props> = (props): ReactElement => {
       case 'body-bold':
         return 'font-bold text-bodyBold'
       case 'body-semibold':
-        return 'font-semibold text-bodySemiBold'
+        return 'font-semibold text-bodySemiBold font-sans-pro'
       case 'body':
         return 'font-normal font-sans-pro text-body'
       case 'subhead':

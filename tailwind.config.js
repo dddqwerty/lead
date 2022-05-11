@@ -37,7 +37,7 @@ module.exports = {
         h3: '1.5rem',
         title1: '1.25rem',
         bodyBold: '1.125rem',
-        bodySemiBold: '1.25rem',
+        bodySemiBold: '18px',
         body: '1.125rem',
         subh: '0.875rem',
         caption: '.75rem',
