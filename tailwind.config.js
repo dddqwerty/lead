@@ -23,8 +23,16 @@ module.exports = {
         border: {
           grey: 'rgba(255, 255, 255, 0.2)',
         },
+        text: {
+          grey: '#d0d0d0',
+          grey1: '#828B98',
+        },
+        bgGrey: '#D0D0D0',
+        bgGrey1: '#f7f7f7',
         blackLgiht: '#0F233E',
         main: '#FFFFFF',
+        blue: '#3D6AD6',
+        grey: '#F5FAFF',
       },
       fontSize: {
         xs: '.75rem',
