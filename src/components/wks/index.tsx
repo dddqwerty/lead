@@ -83,7 +83,6 @@ export const Workers = () => {
         setDef1(false); 
         setDef2(true); 
     }
-
     return (
         <MainLayout classname={'mx-auto max-w-leadScreen'}> 
         <div className="flex flex-row justify-start w-full">
