@@ -14,6 +14,13 @@ export default function In() {
           </Typography>
         </a>
       </Link>
+      <Link href={'/style/work'}>
+        <a>
+          <Typography variant="body-bold" className="text-primary-black hover:underline">
+            Go to Workers page 
+          </Typography>
+        </a>
+      </Link>
       <Link href={'/style/text'}>
         <a>
           <Typography variant="body-bold" className="text-primary-black hover:underline">
