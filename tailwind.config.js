@@ -51,6 +51,7 @@ module.exports = {
         caption: '.75rem',
       },
       height: {
+        400: '25rem',
         40: '2.5rem',
         140: '8.75rem',
         20: '1.25rem',

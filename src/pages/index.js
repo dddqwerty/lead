@@ -1,11 +1,12 @@
 import { MainLayout } from 'layout'
-import { Typography } from 'components'
+import { GridMain, Typography } from 'components'
 import { TextBox } from 'components'
+import Landpage from 'components/landpages/land'
 
 export default function Home() {
   return (
-    <MainLayout classname={'mx-auto max-w-leadScreen'}>
-      <div className="flex-col flex gap-28">
+    <MainLayout classname={''}>
+      <div className="flex-col flex gap-28 mx-auto max-w-leadScreen">
         <div className="w-496 mt-32 flex-col flex gap-10">
           <Typography variant="h1" className="text-primary-main">
             МАНЛАЙЛАГЧ. УР ЧАДВАР. АРДЧИЛАЛ.
@@ -24,14 +25,14 @@ export default function Home() {
         </div>
       </div>
 
-      <div className="flex flex-row space-x-4 w-full justify-around mt-80">
+      <div className="flex flex-row space-x-4 w-full justify-around mt-80 mx-auto max-w-leadScreen">
         <TextBox number="247" txt="Гишүүн"></TextBox>
         <TextBox number="4,534" txt="Үр Шим Хүртэгч"></TextBox>
         <TextBox number="37" txt="Түнш, Хамтрагч"></TextBox>
         <TextBox number="1,585,000" txt="Хүнд Нөлөөлөв"></TextBox>
       </div>
 
-      <div className="flex-col flex gap-28 items-end mt-32">
+      <div className="flex-col flex gap-28 items-end mt-32 mx-auto max-w-leadScreen">
         <div className="w-496 mt-32 flex-col flex gap-10">
           <Typography variant="h1" className="text-primary-main">
             МАНЛАЙЛАГЧ. УР ЧАДВАР. АРДЧИЛАЛ.
@@ -47,6 +48,10 @@ export default function Home() {
             </Typography>
           </div>
         </div>
+      </div>
+      <div className="mt-9">
+        <Landpage className="mx-auto max-w-leadScreen" />
+        <GridMain></GridMain>
       </div>
     </MainLayout>
   )

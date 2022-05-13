@@ -84,7 +84,7 @@ export const Workers = () => {
         setDef2(true); 
     }
     return (
-        <MainLayout classname={'mx-auto max-w-leadScreen'}> 
+        <> 
         <div className="flex flex-row justify-start w-full">
         <Typo variant="h3"> Удирдлагууд </Typo> 
         <div className="flex flex-row justify-end w-full"> 
@@ -108,7 +108,7 @@ export const Workers = () => {
            </div>
         })}
         </div>
-        </MainLayout>
+        </>
     )
 };
 
