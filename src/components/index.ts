@@ -7,3 +7,8 @@ export { default as Goal } from './goals'
 export { default as Requirements } from './requiry'
 export { default as List } from './list'
 export { default as Workers } from './wks'
+export { default as ImgTxt } from './imgtxt'
+export { default as Accompany } from './accome'
+export { default as GirdPic } from './hoverpic'
+export { default as GridMain } from './girdpics'
+
