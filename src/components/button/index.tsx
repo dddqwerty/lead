@@ -6,10 +6,10 @@ type Variants = 'fill' | 'ghost' | 'text' | 'link'
 
 type Props = {
   variant: Variants,
-  children: React.ReactNoe,
+  children: React.ReactNode,
   classname?: string
-  onClick?: () => voi
-  disabled?: boolea
+  onClick?: () => void
+  disabled?: boolean
 }
 
 export default function CustomButton(props: Props) {
