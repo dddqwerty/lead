@@ -21,6 +21,27 @@ export default function In() {
           </Typography>
         </a>
       </Link>
+      <Link href={'/style/goals'}>
+        <a>
+          <Typography variant="body-bold" className="text-primary-black hover:underline">
+            Go to the goals page
+          </Typography>
+        </a>
+      </Link>
+      <Link href={'/style/req'}>
+        <a>
+          <Typography variant="body-bold" className="text-primary-black hover:underline">
+            Go to the Requirements page
+          </Typography>
+        </a>
+      </Link>
+      <Link href={'/style/list'}>
+        <a>
+          <Typography variant="body-bold" className="text-primary-black hover:underline">
+            Go to the List page
+          </Typography>
+        </a>
+      </Link>
       <Link href={'/style/prob'}>
         <a>
           <Typography variant="body-bold" className="text-primary-black hover:underline">

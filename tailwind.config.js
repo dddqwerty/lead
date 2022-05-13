@@ -42,7 +42,7 @@ module.exports = {
         lg: '1.125rem',
         h1: '3.5rem',
         h2: '2.5rem',
-        h3: '1.5rem',
+        h3: '24px',
         title1: '1.25rem',
         bodyBold: '1.125rem',
         bodySemiBold: '18px',
