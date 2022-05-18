@@ -29,7 +29,7 @@ export const GirdPic = () => {
   }
 
   return (
-    <div className="mx-auto w-full md:w-[380px] overflow-hidden relative">
+    <div className="w-full overflow-hidden relative">
       <div
         className={`flex  `}
         onMouseEnter={() => {
