@@ -46,6 +46,9 @@ export const Header = () => {
           <div onClick={() => handleChangeMenu('news')} className=" hover:cursor-pointer">
             Мэдээ
           </div>
+          <div onClick={() => handleChangeMenu('lead')} className=" hover:cursor-pointer">
+            Lead
+          </div>
         </div>
         <div className="hidden md:flex gap-20 lg:flex">
           <div
@@ -81,6 +84,13 @@ export const Header = () => {
             className={`${link === 'news' && 'border-b-4 border-primary-main'} py-[24px]  hover:cursor-pointer`}
           >
             <Typography variant="body">Мэдээ</Typography>
+          </div>
+
+          <div
+            onClick={() => handleChangeMenu('/lead')}
+            className={`${state === '/lead' && 'border-b-4 border-primary-main'} py-[24px] hover:cursor-pointer`}
+          >
+            <Typography variant="body">Lead</Typography>
           </div>
         </div>
       </div>
