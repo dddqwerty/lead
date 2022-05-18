@@ -1,14 +1,13 @@
-import { useState } from 'react'
 import { Typography } from 'components'
 import { handleIcon } from 'utils'
 import router from 'next/router'
+import { useAppContext } from 'context/cont'
 
 export const Header = () => {
-  const [state, setState] = useState('/')
-  const [phone, setPhone] = useState(false)
+  const { setLink, link, phone, setPhone } = useAppContext()
 
   const handleChangeMenu = async (menu) => {
-    setState(menu)
+    setLink(menu)
     await router.push(`/${menu}`)
   }
 
@@ -48,38 +47,38 @@ export const Header = () => {
             Мэдээ
           </div>
         </div>
-        <div className="flex hidden md:flex gap-20 lg:flex">
+        <div className="hidden md:flex gap-20 lg:flex">
           <div
             onClick={() => handleChangeMenu('/')}
-            className={`${state === '/' && 'border-b-4 border-primary-main'} py-[24px] hover:cursor-pointer`}
+            className={`${link === '/' && 'border-b-4 border-primary-main'} py-[24px] hover:cursor-pointer`}
           >
             <Typography variant="body">Нүүр</Typography>
           </div>
 
           <div
             onClick={() => handleChangeMenu('aboutUs')}
-            className={`${state === 'aboutUs' && 'border-b-4 border-primary-main'}  py-[24px] hover:cursor-pointer`}
+            className={`${link === 'aboutUs' && 'border-b-4 border-primary-main'}  py-[24px] hover:cursor-pointer`}
           >
             <Typography variant="body">Бидний тухай</Typography>
           </div>
 
           <div
             onClick={() => handleChangeMenu('projects')}
-            className={`${state === 'projects' && 'border-b-4 border-primary-main'} py-[24px] hover:cursor-pointer`}
+            className={`${link === 'projects' && 'border-b-4 border-primary-main'} py-[24px] hover:cursor-pointer`}
           >
             <Typography variant="body">Төслүүд</Typography>
           </div>
 
           <div
             onClick={() => handleChangeMenu('result')}
-            className={`${state === 'result' && 'border-b-4 border-primary-main'} py-[24px] hover:cursor-pointer `}
+            className={`${link === 'result' && 'border-b-4 border-primary-main'} py-[24px] hover:cursor-pointer `}
           >
             <Typography variant="body">Шийд</Typography>
           </div>
 
           <div
             onClick={() => handleChangeMenu('news')}
-            className={`${state === 'news' && 'border-b-4 border-primary-main'} py-[24px]  hover:cursor-pointer`}
+            className={`${link === 'news' && 'border-b-4 border-primary-main'} py-[24px]  hover:cursor-pointer`}
           >
             <Typography variant="body">Мэдээ</Typography>
           </div>

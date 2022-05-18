@@ -1,16 +1,12 @@
 import { GirdPic } from 'components/hoverpic/index'
 import { Button } from 'components'
-import { useState } from 'react'
+import router from 'next/router'
 
 export const GridMain = () => {
-  const [hidden, setHidden] = useState(true)
+  // const [hidden, setHidden] = useState(true)
 
   const Show = () => {
-    if (hidden) {
-      setHidden(false)
-    } else {
-      setHidden(true)
-    }
+    router.push(`/what-is-lead}`)
   }
 
   return (
@@ -25,8 +21,8 @@ export const GridMain = () => {
         <GirdPic />
         <GirdPic />
       </div>
-      <div
-        className={`${hidden ? 'hidden' : 'visible'} mt-9 grid grid-cols-2 md:grid-cols-4 gap-6 md:gap-y-9 relative `}
+      {/* <div
+        className={`hidden mt-9 grid grid-cols-2 md:grid-cols-4 gap-6 md:gap-y-9 relative `}
       >
         <GirdPic />
         <GirdPic />
@@ -35,7 +31,7 @@ export const GridMain = () => {
         <GirdPic />
         <GirdPic />
         <GirdPic />
-      </div>
+      </div> */}
       <div className="flex justify-center mt-[64px]">
         <Button variant="fill" onClick={() => Show()}>
           del

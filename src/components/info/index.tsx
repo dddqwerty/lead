@@ -1,4 +1,4 @@
-import Typo from "components/typography";
+import { Typography } from "components";
 import { useEffect } from "react";
 import { useState } from "react";
 import { ReactElement } from "react";
@@ -94,19 +94,20 @@ export const Information: FC = (): ReactElement => {
 
     return (
         <>
-            <div className='flex flex-row justify-start w-full m-5 p-10'>
-                <Typo variant="title1" className="flex justify-center"> {data && data.title} </Typo>
-                <div className="flex flex-col justify-center border-t-2 border-[#0F233E] border-opacity-10 w-[40%] m-3.5 p-2">
-                    <Typo variant="body" className="leading-7 mt-5"> {data && data.info && read ? data.info.slice(0, 190) : data && data.info ? data.info : 'ret'} <Typo variant="body" className="flex flex-row text-primary-main cursor-pointer" onClick={toggleRead}> {read ? 'Дэлгэрэнгүй' : 'Буцаах'} <img src="/static/arrow.svg" alt="" className="w-6 h-6 mt-1" /> </Typo> </Typo>
+            <div className='flex max-w-leadScreen mb-[88.75px]'>
+                <Typography variant="title1" className="flex absolute justify-center"> {data && data.title} </Typography>
+                <div className="flex flex-col border-t-2 border-[#0F233E] border-opacity-10 w-[66%] mt-3.5 pt-2">
+                    <Typography variant="body" className="flex flex-col leading-7 mt-5"> {data && data.info && read ? data.info.slice(0, 190) : data && data.info ? data.info : 'ret'}
+                        <Typography variant="body" className="flex text-primary-main cursor-pointer" onClick={toggleRead}> {read ? 'Дэлгэрэнгүй' : 'Буцаах'} <img src="/static/arrow.svg" alt="" className="w-6 h-6 mt-1" /> </Typography> </Typography>
                 </div>
-                <div className="flex flex-col w-72 h-fit bg-[#F7F7F7]">
-                    <DetailedInfo name="info" onClick={option1}> <Typo variant="body" className="pointer-events-none"> Тайлбар </Typo> </DetailedInfo>
+                <div className="flex flex-col justify-end w-[288px]  ml-[130px] h-fit bg-[#F7F7F7]">
+                    <DetailedInfo name="info" onClick={option1}> <Typography variant="body" className="pointer-events-none"> Тайлбар </Typography> </DetailedInfo>
                     <div className="border-b-2"> </div>
-                    <DetailedInfo name='info' onClick={option2}> <Typo variant="body" className="pointer-events-none"> Зорилго </Typo> </DetailedInfo>
+                    <DetailedInfo name='info' onClick={option2}> <Typography variant="body" className="pointer-events-none"> Зорилго </Typography> </DetailedInfo>
                     <div className="border-b-2"> </div>
-                    <DetailedInfo name="info" onClick={option3}> <Typo variant="body" className="pointer-events-none"> Хийсэн зүйлс </Typo> </DetailedInfo>
+                    <DetailedInfo name="info" onClick={option3}> <Typography variant="body" className="pointer-events-none"> Хийсэн зүйлс </Typography> </DetailedInfo>
                     <div className="border-b-2"> </div>
-                    <DetailedInfo name="info" onClick={option4}> <Typo variant="body" className="pointer-events-none"> Үргэлжлэл бий </Typo> </DetailedInfo>
+                    <DetailedInfo name="info" onClick={option4}> <Typography variant="body" className="pointer-events-none"> Үргэлжлэл бий </Typography> </DetailedInfo>
                     <div className="border-b-2"> </div>
                 </div>
             </div>

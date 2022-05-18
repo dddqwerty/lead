@@ -28,8 +28,8 @@ export default function CustomButton(props: Props) {
   }
 
   return (
-    <Button disabled={disabled} onClick={onClick} variant={variant === 'fill' ? 'contained' : variant === 'ghost' ? 'outlined' : 'text'} sx={{ padding: 0}}  className={`py-3 px-5 ${classname} ${getClasses(variant)}`}>
-        {children}
+    <Button disabled={disabled} onClick={onClick} variant={variant === 'fill' ? 'contained' : variant === 'ghost' ? 'outlined' : 'text'} sx={{ padding: 0 }} className={`py-3 px-5 ${classname} ${getClasses(variant)}`}>
+      {children}
     </Button>
 
   );
