@@ -7,8 +7,8 @@ type Variants = 'fill' | 'ghost' | 'text' | 'link'
 type Props = {
   variant: Variants,
   children: React.ReactNode,
-  classname?: string
-  onClick?: () => void
+  classname?: string,
+  onClick?: () => void,
   disabled?: boolean
 }
 
