@@ -7,7 +7,7 @@ export const Lead = () => {
       <div className="flex flex-col gap-[64px] mt-[231px]">
         <div className="flex flex-col gap-[24px]">
           <div className="flex flex-col">
-            <img src="static/lead-Vector-logo.svg" className="max-w-[115px]" />
+            <img src="/static/lead-Vector-logo.svg" className="max-w-[115px]" />
             <Typography className="text-primary-main" variant="h1">
               ХӨТӨЛБӨР
             </Typography>
@@ -45,46 +45,46 @@ export const Lead = () => {
       </div>
       <div className="hidden md:block lg:block relative w-[690px]">
         <div className="w-[93px] h-[93px] absolute top-[132px] left-[302px] rounded-full bg-bgGrey z-10">
-          <img src="static/burged.png" />
+          <img src="/static/burged.png" />
         </div>
         <div className="w-[93px] h-[93px] absolute top-[132px] left-[548px] rounded-full bg-bgGrey z-10">
-          <img src="static/burged.png" />
+          <img src="/static/burged.png" />
         </div>
         <div className="w-[93px] h-[93px] absolute top-[232px] left-[148px] rounded-full bg-bgGrey z-10">
-          <img src="static/burged.png" />
+          <img src="/static/burged.png" />
         </div>
         <div className="w-[93px] h-[93px] absolute top-[282px] left-[718px] rounded-full bg-bgGrey z-10">
-          <img src="static/burged.png" />
+          <img src="/static/burged.png" />
         </div>
         <div className="w-[93px] h-[93px] absolute top-[242px] left-[418px] rounded-full bg-bgGrey z-10">
-          <img src="static/burged.png" />
+          <img src="/static/burged.png" />
         </div>
         <div className="w-[93px] h-[93px] absolute top-[532px] left-[98px] rounded-full bg-bgGrey z-10">
-          <img src="static/burged.png" />
+          <img src="/static/burged.png" />
         </div>
         <div className="w-[93px] h-[93px] absolute top-[532px] left-[768px] rounded-full bg-bgGrey z-10">
-          <img src="static/burged.png" />
+          <img src="/static/burged.png" />
         </div>
         <div className="w-[93px] h-[93px] absolute top-[382px] left-[233px] rounded-full bg-bgGrey z-10">
-          <img src="static/burged.png" />
+          <img src="/static/burged.png" />
         </div>
         <div className="w-[93px] h-[93px] absolute top-[332px] left-[608px] rounded-full bg-bgGrey z-10">
-          <img src="static/burged.png" />
+          <img src="/static/burged.png" />
         </div>
         <div className="w-[93px] h-[93px] absolute top-[532px] left-[608px] rounded-full bg-bgGrey z-10">
-          <img src="static/burged.png" />
+          <img src="/static/burged.png" />
         </div>
         <div className="w-[93px] h-[93px] absolute top-[612px] left-[328px] rounded-full bg-bgGrey z-10">
-          <img src="static/burged.png" />
+          <img src="/static/burged.png" />
         </div>
         <div className="w-[93px] h-[93px] absolute top-[732px] left-[248px] rounded-full bg-bgGrey z-10">
-          <img src="static/burged.png" />
+          <img src="/static/burged.png" />
         </div>
         <div className="w-[93px] h-[93px] absolute top-[752px] left-[568px] rounded-full bg-bgGrey z-10">
-          <img src="static/burged.png" />
+          <img src="/static/burged.png" />
         </div>
         <div className="absolute -right-36 top-32">
-          <img src="static/members.svg" />
+          <img src="/static/members.svg" />
         </div>
       </div>
     </div>

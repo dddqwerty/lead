@@ -77,7 +77,7 @@ export const Topic = () => {
         </div>
       </div>
       <div>
-        <img src="static/topic.svg" className="w-[702px] absolute top-[1470px] left-[600px]" />
+        <img src="/static/topic.webp" className="w-[702px] absolute top-[1470px] left-[600px]" />
       </div>
     </div>
   )
