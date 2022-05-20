@@ -6,6 +6,7 @@ import Landpage from 'components/landpages/land'
 import Support from 'components/oursup'
 import router from 'next/router'
 import { useAppContext } from 'context/cont'
+import Img21 from '../../public/static/indexpic21.png'
 
 export default function Home() {
   const { setLink } = useAppContext()
@@ -54,8 +55,12 @@ export default function Home() {
         </div>
       </motion.ul>
 
-      <div className="flex-col flex gap-28 items-end mt-32 mx-auto max-w-leadScreen">
-        <div className="w-496 mt-32 flex-col flex gap-10">
+      <div className="flex-row flex gap-28 items-end mt-32 mx-auto max-w-leadScreen justify-end">
+        <div>
+          <img className="absolute left-[-20px] top-[1100px]" src={Img21.src} />
+          <img className="absolute left-0 top-[900px]" src="static/indexpic22.svg" />
+        </div>
+        <div className="w-496 mt-32 flex-col flex gap-10 ">
           <Typography variant="h1" className="text-primary-main">
             МАНЛАЙЛАГЧ. УР ЧАДВАР. АРДЧИЛАЛ.
           </Typography>
