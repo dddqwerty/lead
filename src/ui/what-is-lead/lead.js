@@ -4,7 +4,7 @@ import { handleIcon } from 'utils'
 export const Lead = () => {
   return (
     <div className="flex">
-      <div className="flex flex-col gap-[64px] mt-[231px]">
+      <div className="flex flex-col gap-[64px] mt-32 md:mt-[231px]">
         <div className="flex flex-col gap-[24px]">
           <div className="flex flex-col">
             <img src="/static/lead-Vector-logo.svg" className="max-w-[115px]" />
@@ -20,7 +20,7 @@ export const Lead = () => {
           </div>
         </div>
 
-        <div className="flex gap-20">
+        <div className="flex gap-20 items-center md:items-start">
           <div className="flex items-center gap-3">
             <div className="h-[56px] w-[56px] text-blue bg-grey flex justify-center items-center rounded-full">
               {handleIcon({

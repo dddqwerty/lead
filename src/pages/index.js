@@ -8,31 +8,33 @@ import HomeThird from 'components/home/homethird'
 import News from 'components/home/news'
 import Landpage from 'components/landpages/land'
 import Support from 'components/oursup'
+import { PADDINGX } from 'constants/layout'
 
 export const Home = () => {
   const { setLink } = useAppContext()
+
   return (
     <MainLayout>
       <HomeFirst />
       <HomeSecond />
       <HomeThird />
       <div className="mt-9">
-        <div className="mt-[380px]">
+        <div className="md:mt-[380px]">
           <Landpage className="mx-auto max-w-leadScreen" />
         </div>
         <GridMain />
         <div className="flex justify-center mt-[64px]">
           <Button
-            variant="fill"
+            variant="ghost"
             onClick={() => {
               router.push(`/projects`), setLink('projects')
             }}
           >
-            del
+            Дэлгэрэнгүй
           </Button>
         </div>
         <News />
-        <Support />
+        <Support className={PADDINGX} />
       </div>
     </MainLayout>
   )

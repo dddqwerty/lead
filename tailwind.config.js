@@ -49,6 +49,8 @@ module.exports = {
         body: '1.125rem',
         subh: '0.875rem',
         caption: '.75rem',
+        bodyMobile: '24px',
+        mobile: '16px',
       },
       height: {
         400: '25rem',

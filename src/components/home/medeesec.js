@@ -1,9 +1,15 @@
 import Typo from 'components/typography'
+import { useTheme } from '@mui/material/styles'
+import useMediaQuery from '@mui/material/useMediaQuery'
 
 export const Medeesecond = () => {
+  const theme = useTheme()
+  const matches = useMediaQuery(theme.breakpoints.down('sm'))
   return (
     <div className="flex flex-col gap-8">
-      <Typo variant="h2">Д. Жанчив: Технологийн хөгжил бидний амьдралыг илүү хялбарчилна.</Typo>
+      <Typo variant={matches ? 'body-mobile' : 'h2'}>
+        Д. Жанчив: Технологийн хөгжил бидний амьдралыг илүү хялбарчилна.
+      </Typo>
       <Typo variant="body">
         Би технологийн салбарт 10 дахь жилдээ ажиллаж байна. Улс нийгэмдээ хэрэгтэй, хүний өдөр тутмын асуудлыг шийдэж
         чаддаг учраас технологи, программ хангамжийн салбарт ажиллахдаа урам зоригтой байдаг. Манай байгууллага өмнө нь

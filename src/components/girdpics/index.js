@@ -1,5 +1,6 @@
 import { GirdPic } from 'components/hoverpic/index'
 import { useAppContext } from 'context/cont'
+import { PADDINGX } from 'constants/layout'
 
 export const GridMain = () => {
   const { projectType } = useAppContext()
@@ -79,6 +80,9 @@ export const GridMain = () => {
   const Select = () => {
     if (projectType === '') {
       return types.map((inedx, i) => {
+        if (i > 4) {
+          return
+        }
         return <div key={i}>{inedx}</div>
       })
     } else {
@@ -91,9 +95,8 @@ export const GridMain = () => {
     }
   }
   return (
-    <div className="flex flex-col mx-auto max-w-[1592px] mb-[128.75px]">
+    <div className={`flex flex-col mx-auto max-w-[1592px] mb-[68.75px] ${PADDINGX}`}>
       <div className={`grid grid-cols-2 md:grid-cols-4 gap-6 md:gap-y-9 relative`}>{<Select />}</div>
-
       <div>
         {/* <div
           className={`${link === 'projects' ? 'grid' : 'hidden '} mt-9  grid-cols-2 md:grid-cols-4 gap-6 md:gap-y-9 relative `}

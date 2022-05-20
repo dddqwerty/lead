@@ -1,11 +1,17 @@
 import Typo from "components/typography";
 import { AppWrapper, useAppContext } from "context/cont";
 import { useContext, useState } from "react";
+import { useTheme } from '@mui/material/styles'
+import useMediaQuery from '@mui/material/useMediaQuery'
 import Item from ".";
+import { PADDINGX } from "constants/layout";
+
 
 export const Landpage = () => {
 
     const { setData, setData1, setData2, setData3, setData4, setProjectType } = useAppContext()
+    const theme = useTheme()
+    const matches = useMediaQuery(theme.breakpoints.down('sm'))
 
     const option = () => {
         setData(true);
@@ -54,12 +60,12 @@ export const Landpage = () => {
     }
 
     return (
-        <div className="mx-auto max-w-leadScreen mb-[126px]">
-            <div className="flex flex-col justify-center items-center gap-5 ">
-                <Typo variant="h1"> Онцох төслүүд </Typo>
-                <Typo variant="body"> Бидний хэрэгжүүлсэн зарим онцлох төслүүд  </Typo>
+        <div className={`mb-[80px] md:mb-[126px] ${PADDINGX}`}>
+            <div className="flex flex-col justify-center md:items-center gap-5 ">
+                <Typo variant={matches ? "body-mobile" : "h1"} className="font-bold"> Онцох төслүүд </Typo>
+                <Typo className="hidden md:block" variant="body"> Бидний хэрэгжүүлсэн зарим онцлох төслүүд  </Typo>
             </div>
-            <div className="grid grid-cols-5 grid-flow-row gap-4 mt-16">
+            <div className="grid grid-cols-2 md:grid-cols-5 md:grid-flow-row gap-4 mt-16">
                 <Item title="Бүгд" type="earth" onClick={option} />
                 <Item title="Ажилгүйдэл ядуурал" type="bar" onClick={option1} />
                 <Item title="Байгаль орчин хотжилт" type="plant" onClick={option2} />

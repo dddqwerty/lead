@@ -40,7 +40,7 @@ export const Goal = (props: Props) => {
         </div>
         <Typo variant="body"> {props.info} </Typo>
       </div>
-      {!props.last && <div className="border border-r h-[70%]" />}
+      {!props.last && <div className="hidden md:block border border-r h-[70%]" />}
     </div>
   )
 }

@@ -5,3 +5,8 @@
 .black {
     background-color: black;
 }
+
+body {
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+}

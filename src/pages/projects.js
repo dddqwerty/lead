@@ -4,10 +4,9 @@ import { MainLayout } from 'layout'
 
 export const Projects = () => {
   return (
-    <MainLayout>
-      <div className="mt-[89px]">
-        <Landpage className="mx-auto max-w-leadScreen " />
-      </div>
+    <MainLayout classname={`mx-auto max-w-leadScreen`}>
+      <div className="h-32 md:h-[150px]" />
+      <Landpage />
       <GridMain />
     </MainLayout>
   )

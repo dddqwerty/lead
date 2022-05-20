@@ -1,25 +1,25 @@
 import { Typography } from 'components'
+import { useTheme } from '@mui/material/styles'
+import useMediaQuery from '@mui/material/useMediaQuery'
 
-export const Support = () => {
+export const Support = ({ className }) => {
+  const theme = useTheme()
+  const matches = useMediaQuery(theme.breakpoints.down('sm'))
   return (
-    <div className="mt-[100px] ">
-      <Typography variant="h1" className="text-[#0F233E] flex justify-center">
-        Биднийг дэмжигч,
+    <div className={`mt-[100px] max-w-leadScreen mx-auto ${className}`}>
+      <Typography
+        variant={matches ? 'body-mobile' : 'h1'}
+        className="text-[#0F233E] text-center md:text-left flex justify-center"
+      >
+        Биднийг дэмжигч, хамтрагч байгууллагууд
       </Typography>
-      <Typography variant="h1" className="text-[#0F233E] flex justify-center">
-        хамтрагч байгууллагууд
-      </Typography>
-      <div className="mt-7 ">
-        <Typography variant="body" className="text-[#0F233E] flex justify-center">
-          Бид ардчилал, хүний эрх, залуусын оролцоог дэмжигч
-        </Typography>
-        <Typography variant="body" className="text-[#0F233E] flex justify-center">
-          дотоод, гадаадын байгууллагуудтай идэвхитэй хамтран
-        </Typography>
-        <Typography variant="body" className="text-[#0F233E] flex justify-center ">
+
+      <div className="mt-7 flex flex-col items-center">
+        <Typography variant="body" className="text-[#0F233E] text-center md:w-[488px]">
+          Бид ардчилал, хүний эрх, залуусын оролцоог дэмжигч дотоод, гадаадын байгууллагуудтай идэвхитэй хамтран
           ажилладаг
         </Typography>
-        <div className="flex justify-center flex-row space-x-[150px] mt-[83px] mb-[170px]">
+        <div className="flex justify-center gap-y-10 items-center md:items-start flex-col md:flex-row md:space-x-[150px] mt-[83px] mb-[170px]">
           <img src="/static/IRI.svg" className="w-[240px] h-[195px]  " />
           <img src="/static/wole.svg" className="w-[300px] h-[196px]  " />
           <img src="/static/usaid.svg" className="w-[300px] h-[193px]  " />

@@ -74,7 +74,7 @@ export const Item: FC<Items> = (props: Items) => {
                     <div className={`overflow-hidden flex justify-center items-center rounded-full w-[75px] h-[75px] shadow-lg shadow-black-500/50  ${change ? 'bg-primary-main' : 'bg-white'} mb-4`}>
                         <Animation logo={term} classname={`${change ? 'bg-primary-main' : 'bg-white'} w-[48px] h-48px]`} />
                     </div>
-                    <Typo variant='body'> {props.title} </Typo>
+                    <Typo variant='body' className='text-center md:text-left'> {props.title} </Typo>
                 </div>
             </div>
         </>

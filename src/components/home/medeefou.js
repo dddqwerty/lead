@@ -1,9 +1,15 @@
 import Typo from 'components/typography'
+import { useTheme } from '@mui/material/styles'
+import useMediaQuery from '@mui/material/useMediaQuery'
 
 export const Medeefourth = () => {
+  const theme = useTheme()
+  const matches = useMediaQuery(theme.breakpoints.down('sm'))
   return (
     <div className="flex flex-col">
-      <Typo variant="h3">Д. Жанчив: Технологийн хөгжил бидний амьдралыг илүү хялбарчилна.</Typo>
+      <Typo variant={matches ? 'body-mobile' : 'h2'}>
+        Д. Жанчив: Технологийн хөгжил бидний амьдралыг илүү хялбарчилна.
+      </Typo>
       <Typo variant="body" className="mt-[32px]">
         Би технологийн салбарт 10 дахь жилдээ ажиллаж байна. Улс нийгэмдээ хэрэгтэй, хүний өдөр тутмын асуудлыг шийдэж
         чаддаг учраас технологи, программ хангамжийн салбарт ажиллахдаа урам зоригтой байдаг. Манай байгууллага өмнө нь
@@ -17,7 +23,7 @@ export const Medeefourth = () => {
         хялбарчлагдаж QR код уншуулан ирцийн мэдээгээ илгээх боломжтой юм. Бид нар аппликейшнээ сар орчмын хугацаанд
         хөгжүүлсэн. Аппликейшн маань дараах 3 дэд хэсгээс бүрдэнэ.{' '}
       </Typo>
-      <img src="./static/medee.svg" className="mt-[32px]"></img>
+      <img src="/static/medee.svg" className="mt-[32px]"></img>
     </div>
   )
 }

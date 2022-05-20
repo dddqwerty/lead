@@ -94,13 +94,13 @@ export const Information: FC = (): ReactElement => {
 
     return (
         <>
-            <div className='flex max-w-leadScreen mb-[88.75px]'>
-                <Typography variant="title1" className="flex absolute justify-center"> {data && data.title} </Typography>
-                <div className="flex flex-col border-t-2 border-[#0F233E] border-opacity-10 w-[66%] mt-3.5 pt-2">
+            <div className='flex flex-col-reverse md:flex-row max-w-leadScreen mb-[88.75px]'>
+                <Typography variant="title1" className="md:flex hidden absolute justify-center"> {data && data.title} </Typography>
+                <div className="flex md:flex-col border-t-2 border-[#0F233E] border-opacity-10 w-[66%] mt-3.5 pt-2">
                     <Typography variant="body" className="flex flex-col leading-7 mt-5"> {data && data.info && read ? data.info.slice(0, 190) : data && data.info ? data.info : 'ret'}
-                        <Typography variant="body" className="flex text-primary-main cursor-pointer" onClick={toggleRead}> {read ? 'Дэлгэрэнгүй' : 'Буцаах'} <img src="/static/arrow.svg" alt="" className="w-6 h-6 mt-1" /> </Typography> </Typography>
+                    <Typography variant="body" className="flex text-primary-main cursor-pointer" onClick={toggleRead}> {read ? 'Дэлгэрэнгүй' : 'Буцаах'} <img src="/static/arrow.svg" alt="" className="w-6 h-6 mt-1" /> </Typography> </Typography>
                 </div>
-                <div className="flex flex-col justify-end w-[288px]  ml-[130px] h-fit bg-[#F7F7F7]">
+                <div className="flex flex-col md:justify-end w-[288px]  md:ml-[130px] h-fit bg-[#F7F7F7]">
                     <DetailedInfo name="info" onClick={option1}> <Typography variant="body" className="pointer-events-none"> Тайлбар </Typography> </DetailedInfo>
                     <div className="border-b-2"> </div>
                     <DetailedInfo name='info' onClick={option2}> <Typography variant="body" className="pointer-events-none"> Зорилго </Typography> </DetailedInfo>

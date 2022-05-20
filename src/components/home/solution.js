@@ -1,32 +1,38 @@
 import Support from 'components/oursup'
 import Typo from 'components/typography'
+import { PADDINGX } from 'constants/layout'
 import { useState } from 'react'
+import { useTheme } from '@mui/material/styles'
+import useMediaQuery from '@mui/material/useMediaQuery'
 
 export const Shiid = (props) => {
   const { posistion } = props
   const [read, setRead] = useState(true)
+  const theme = useTheme()
+  const matches = useMediaQuery(theme.breakpoints.down('sm'))
 
   const toggleRead = () => {
     setRead(!read)
   }
   return (
-    <div className="mx-auto max-w-leadScreen grid mt-[129px]">
+    <div className={`mx-auto max-w-leadScreen grid ${PADDINGX}`}>
+      <div className="mt-[129px]" />
       <div className="grid grid-flow-col gap-[150px] ">
         <div>
-          <Typo variant="h1" className="text-[#0F233E]">
+          <Typo variant={matches ? 'body-mobile' : 'h1'} className="text-[#0F233E]">
             ШИЙДЭХ, ОРОЛЦОХ,
           </Typo>
-          <Typo variant="h1" className="text-[#0F233E]">
+          <Typo variant={matches ? 'body-mobile' : 'h1'} className="text-[#0F233E]">
             МЭДЭЛЖИХ ҮЙЛЭЭ
           </Typo>
-          <Typo variant="h1" className="text-[#0F233E]">
+          <Typo variant={matches ? 'body-mobile' : 'h1'} className="text-[#0F233E]">
             ӨӨРЧЛӨХ НЬ
           </Typo>
-          <Typo variant="body" className="text-[#0F233E] mt-[40px]">
+          <Typo variant="body" className="text-[#0F233E] mt-[20px] md:mt-[40px]">
             Тэгш хамарсан хөгжлийн арга хэрэгсэл, заавар
           </Typo>
 
-          <div className="flex items-center mt-[96px]">
+          <div className="flex items-center mt-[48px] md:mt-[96px]">
             <div className="relative bg-slate-200 w-14 h-14 rounded-full hover:cursor-pointer ">
               <img src="/static/Group.svg" className="absolute left-[20px] top-[16px]" />
             </div>
@@ -36,7 +42,7 @@ export const Shiid = (props) => {
           </div>
         </div>
 
-        <div className="relative w-[407px] h-[405px]">
+        <div className="relative hidden md:block w-[407px] h-[405px]">
           <div className="w-[407px] h-[405px]">
             <img src="/static/shiid.svg" />
           </div>
@@ -53,7 +59,11 @@ export const Shiid = (props) => {
         </div>
       </div>
 
-      <div className={`${posistion === 'right' ? 'flex flex-row-reverse' : 'flex'} max-w-1200px mx-auto mt-[207px] `}>
+      <div
+        className={`${
+          posistion === 'right' ? 'flex flex-row-reverse' : 'flex'
+        } max-w-1200px mx-auto mt-[48px] md:mt-[207px] `}
+      >
         <div className={`${posistion === 'right' ? 'mr-[72px] ' : 'ml-[0px] '}`}>
           <div className="flex-col grid gap-y-6 justify-start  ">
             <Typo variant="title1" className="font-semibold">

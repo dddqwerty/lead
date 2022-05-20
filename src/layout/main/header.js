@@ -1,13 +1,24 @@
 import { Typography } from 'components'
-import { handleIcon } from 'utils'
 import { useRouter } from 'next/router'
 import Link from 'next/link'
 import { useEffect, useState } from 'react'
+import { PADDINGX } from 'constants/layout'
+import CustomAccordion, { AccordionDetailsWithLink } from 'components/CustomAccordion'
+import MenuToggle from './MenuToggle'
 
 export const Header = () => {
   const router = useRouter()
   const [link, setLink] = useState('/')
+  const [showMobileMenu, setShowMobileMenu] = useState(false)
   const params = router.pathname
+
+  useEffect(() => {
+    if (showMobileMenu) {
+      document.body.style.overflow = 'hidden'
+    } else {
+      document.body.style.overflow = 'scroll'
+    }
+  }, [showMobileMenu])
 
   useEffect(() => {
     setLink(params)
@@ -19,18 +30,63 @@ export const Header = () => {
   }
 
   return (
-    <div className="border-b ">
-      <div className="mx-auto max-w-leadScreen w-screen flex justify-between items-center">
+    <div className={`border-b fixed z-50 w-full bg-white`}>
+      <div className={`mx-auto max-w-leadScreen flex justify-between items-center ${PADDINGX}  w-full`}>
         <img
           onClick={() => handleChangeMenu('/')}
           src="/static/lead-logo.svg"
           alt=""
           className="flex h-40 w-140 hover:cursor-pointer md:flex "
         />
-        <div className="flex hover:cursor-pointer md:hidden py-[24px] mx-10  lg:hidden" onClick={() => phoneMenu()}>
-          {handleIcon({
-            icon: 'menu',
-          })}
+        <MenuToggle
+          isOpen={showMobileMenu}
+          toggle={() => {
+            setShowMobileMenu(!showMobileMenu)
+          }}
+        />
+        <div
+          style={{
+            transition: '0.3s',
+            opacity: showMobileMenu ? 1 : 0,
+            left: showMobileMenu ? '0%' : '100%',
+          }}
+          className={`w-full fixed flex flex-col overflow-y-scroll bg-white h-screen top-[72px]`}
+        >
+          <div className={`block lg:hidden`}>
+            <AccordionDetailsWithLink href="/" isActive={link === '/'}>
+              <Typography variant="body" className="text-onSurface-black-medium">
+                Нүүр
+              </Typography>
+            </AccordionDetailsWithLink>
+            <AccordionDetailsWithLink href="/lead" isActive={link === '/lead'}>
+              <Typography variant="body" className="text-onSurface-black-medium">
+                What is Lead
+              </Typography>
+            </AccordionDetailsWithLink>
+            <AccordionDetailsWithLink href="/aboutUs" isActive={link === '/aboutUs'}>
+              <Typography variant="body" className="text-onSurface-black-medium">
+                Бидний тухай
+              </Typography>
+            </AccordionDetailsWithLink>
+            <AccordionDetailsWithLink href="/projects" isActive={link === '/projects'}>
+              <Typography variant="body" className="text-onSurface-black-medium">
+                Төслүүд
+              </Typography>
+            </AccordionDetailsWithLink>
+            <AccordionDetailsWithLink href="/solution" isActive={link === '/solution'}>
+              <Typography variant="body" className="text-onSurface-black-medium">
+                Шийд
+              </Typography>
+            </AccordionDetailsWithLink>
+            <AccordionDetailsWithLink href="/news" isActive={link === '/news'}>
+              <Typography variant="body" className="text-onSurface-black-medium">
+                Мэдээ
+              </Typography>
+            </AccordionDetailsWithLink>
+          </div>
+          <div className="hidden lg:block">
+            <CustomAccordion items={[]} />
+          </div>
         </div>
         <div className="hidden md:flex gap-20 lg:flex">
           <Link href={'/'}>
@@ -63,7 +119,9 @@ export const Header = () => {
           <Link href={'/solution'}>
             <a>
               <div
-                className={`${link === 'solution' && 'border-b-4 border-primary-main'} py-[24px] hover:cursor-pointer `}
+                className={`${
+                  link === '/solution' && 'border-b-4 border-primary-main'
+                } py-[24px] hover:cursor-pointer `}
               >
                 <Typography variant="body">Шийд</Typography>
               </div>
