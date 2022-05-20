@@ -79,13 +79,13 @@ export const GridMain = () => {
 
   const Select = () => {
     if (projectType === '') {
-      return types.map(inedx, (i) => {
+      return types.map((inedx, i) => {
         return <div key={i}>{inedx}</div>
       })
     } else {
       return types
         .filter((comp) => comp?.props?.type === projectType)
-        .map(index, (i) => {
+        .map((index, i) => {
           console.log(index)
           return <div key={i}>{index}</div>
         })
