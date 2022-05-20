@@ -77,6 +77,12 @@ export const Header = () => {
               </div>
             </a>
           </Link>
+          <div
+            onClick={() => handleChangeMenu('/lead')}
+            className={`${link === '/lead' && 'border-b-4 border-primary-main'} py-[24px] hover:cursor-pointer`}
+          >
+            <Typography variant="body">Lead</Typography>
+          </div>
         </div>
       </div>
     </div>

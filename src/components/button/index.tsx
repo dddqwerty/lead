@@ -24,6 +24,8 @@ export default function CustomButton(props: Props) {
         return `hover:opacity-[0.75] bg-transparent border-primary-main border-[1.5px]`
       case 'text':
         return `hover:opacity-[0.75] hover:bg-transparent`
+      case 'link':
+        return `hover:opacity-[0.75] hover:bg-transparent underline`
     }
   }
 
