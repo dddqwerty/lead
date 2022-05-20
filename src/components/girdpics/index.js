@@ -76,7 +76,6 @@ export const GridMain = () => {
       type="money"
     />,
   ]
-
   const Select = () => {
     if (projectType === '') {
       return types.map((inedx, i) => {
@@ -91,7 +90,6 @@ export const GridMain = () => {
         })
     }
   }
-
   return (
     <div className="flex flex-col mx-auto max-w-[1592px] mb-[128.75px]">
       <div className={`grid grid-cols-2 md:grid-cols-4 gap-6 md:gap-y-9 relative`}>{<Select />}</div>

@@ -1,6 +1,5 @@
 import { Lead } from './lead'
 import { Map } from './map'
-import { News } from './news'
 import { Topic } from './topic'
 
 export const Home = () => {
@@ -9,7 +8,6 @@ export const Home = () => {
       <Lead />
       <Map />
       <Topic />
-      <News />
     </div>
   )
 }

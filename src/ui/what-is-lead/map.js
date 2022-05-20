@@ -22,7 +22,7 @@ export const Map = () => {
           </div>
         </div>
         <div className="absolute -left-[100px] max-w-[1442px]">
-          <img src="static/map.svg" />
+          <img src="/static/map.svg" className="max-w-[125%]" />
         </div>
       </div>
     </div>
