@@ -10,8 +10,11 @@ export function AppWrapper({ children }) {
   const [data2, setData2] = useState(false)
   const [data3, setData3] = useState(false)
   const [data4, setData4] = useState(false)
+  const [projectType, setProjectType] = useState('')
 
   let sharedState = {
+    projectType,
+    setProjectType,
     link,
     setLink,
     phone,

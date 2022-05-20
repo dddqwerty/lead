@@ -50,10 +50,11 @@ export const Header = () => {
             </a>
           </Link>
 
-          <Link href={'/project'}>
+          <Link href={'/projects'}>
             <a>
               <div
-                className={`${link === '/project' && 'border-b-4 border-primary-main'} py-[24px] hover:cursor-pointer`}
+                onClick={() => handleChangeMenu('projects')}
+                className={`${link === '/projects' && 'border-b-4 border-primary-main'} py-[24px] hover:cursor-pointer`}
               >
                 <Typography variant="body">Төслүүд</Typography>
               </div>
