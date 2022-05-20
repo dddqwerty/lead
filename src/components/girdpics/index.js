@@ -1,14 +1,8 @@
 import { GirdPic } from 'components/hoverpic/index'
 import { Button } from 'components'
-import router from 'next/router'
+import Link from 'next/link'
 
 export const GridMain = () => {
-  // const [hidden, setHidden] = useState(true)
-
-  const Show = () => {
-    router.push(`/what-is-lead}`)
-  }
-
   return (
     <div className="flex flex-col mx-auto max-w-[1592px] px-10">
       <div className="grid grid-cols-2 md:grid-cols-4 md:gap-y-9 relative gap-x-6">
@@ -32,11 +26,13 @@ export const GridMain = () => {
         <GirdPic />
         <GirdPic />
       </div> */}
-      <div className="flex justify-center mt-[64px]">
-        <Button variant="ghost" onClick={() => Show()}>
-          Дэлгэрэнгүй
-        </Button>
-      </div>
+      <Link href="/what-is-lead}">
+        <a>
+          <div className="flex justify-center mt-[64px]">
+            <Button variant="ghost">Дэлгэрэнгүй</Button>
+          </div>
+        </a>
+      </Link>
     </div>
   )
 }
