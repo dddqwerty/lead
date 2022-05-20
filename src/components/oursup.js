@@ -16,7 +16,7 @@ export const Support = () => {
         <Typography variant="body" className="text-[#0F233E] flex justify-center">
           дотоод, гадаадын байгууллагуудтай идэвхитэй хамтран
         </Typography>
-        <Typography variant="body" className="text-[#0F233E] flex justify-center mt">
+        <Typography variant="body" className="text-[#0F233E] flex justify-center ">
           ажилладаг
         </Typography>
         <div className="flex justify-center flex-row space-x-[150px] mt-[83px] mb-[170px]">

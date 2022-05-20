@@ -53,7 +53,6 @@ export const Header = () => {
           <Link href={'/projects'}>
             <a>
               <div
-                onClick={() => handleChangeMenu('projects')}
                 className={`${link === '/projects' && 'border-b-4 border-primary-main'} py-[24px] hover:cursor-pointer`}
               >
                 <Typography variant="body">Төслүүд</Typography>
@@ -61,10 +60,10 @@ export const Header = () => {
             </a>
           </Link>
 
-          <Link href={'/result'}>
+          <Link href={'/solution'}>
             <a>
               <div
-                className={`${link === '/result' && 'border-b-4 border-primary-main'} py-[24px] hover:cursor-pointer`}
+                className={`${link === 'solution' && 'border-b-4 border-primary-main'} py-[24px] hover:cursor-pointer `}
               >
                 <Typography variant="body">Шийд</Typography>
               </div>
