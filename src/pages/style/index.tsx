@@ -72,6 +72,11 @@ export default function In() {
             Товчлуур
           </Typography>
         </Button>
+        <Button variant='link'>
+          <Typography variant='body' className='text-black-light'>
+            Товчлуур
+          </Typography>
+        </Button>
       </div>
 
       <Link href={'/style/land'}>
