@@ -3,9 +3,11 @@ import { useState } from 'react'
 import React from 'react'
 import { motion } from 'framer-motion'
 
-export const GirdPic = () => {
+export const GirdPic = (props) => {
   const [hidden, sethidden] = useState(true)
   const [reclose, setReclose] = useState(false)
+
+  const { img, text, subText = '', type } = props
 
   const Hoverr = () => {
     if (hidden) {
@@ -39,40 +41,42 @@ export const GirdPic = () => {
           Hoverr(), ExHoverr()
         }}
       >
-        <motion.a
+        <motion.div
           className={`${hidden ? 'opacity-0' : 'opacity-25 '} flex absolute w-full h-full bg-[#000000] `}
           animate={hidden ? 'closed' : 'open'}
           variants={variants}
           transition={{ duration: 0.4 }}
         />
-        <motion.a
+        <motion.div
           className={`${reclose ? 'opacity-0' : 'opacity-25 '} flex absolute w-full h-full bg-[#000000] `}
           animate={reclose ? 'reclose1' : 'reclose2'}
           variants={variants}
           transition={{ duration: 0.4 }}
         />
         <div className="flex">
-          <img src="static/gird1.svg" />
-          <motion.a
-            className={`${hidden ? 'opacity-0' : 'opacity-1'} flex absolute ml-[32px] mt-[176px]`}
+          <img src={img} type={type} />
+          <motion.div
+            className={`${hidden ? 'opacity-0' : 'opacity-1'} flex absolute ml-[32px] ${
+              subText === '' ? 'mt-[210px]' : 'mt-[176px]'
+            }`}
             animate={hidden ? 'invis' : 'vis'}
             variants={variants}
             transition={{ duration: 0.1 }}
           >
             <Typography className="text-white" variant="body-bold">
-              Сонгуулийн дата хакатон
+              {text}
             </Typography>
-          </motion.a>
-          <motion.a
+          </motion.div>
+          <motion.div
             className={`${hidden ? 'opacity-0' : 'opacity-1'} flex absolute ml-[32px] mt-[210px]`}
             animate={hidden ? 'invis' : 'vis'}
             variants={variants}
             transition={{ duration: 0.1 }}
           >
             <Typography className="text-white" variant="subhead">
-              Залуусын оролцоо
+              {subText}
             </Typography>
-          </motion.a>
+          </motion.div>
         </div>
       </div>
     </div>

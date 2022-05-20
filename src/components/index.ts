@@ -11,4 +11,4 @@ export { default as ImgTxt } from './imgtxt'
 export { default as Accompany } from './accome'
 export { default as GirdPic } from './hoverpic'
 export { default as GridMain } from './girdpics'
-
+export { default as NumCount } from './numCount'

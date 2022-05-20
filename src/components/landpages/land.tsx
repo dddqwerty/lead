@@ -5,12 +5,12 @@ import Item from ".";
 
 export const Landpage = () => {
 
-    const { setData , setData1 , setData2 , setData3 , setData4 } = useAppContext()
-
+    const { setData, setData1, setData2, setData3, setData4, setProjectType } = useAppContext()
 
     const option = () => {
         setData(true);
         setData1(false);
+        setProjectType('')
         setData2(false);
         setData3(false);
         setData4(false);
@@ -19,6 +19,7 @@ export const Landpage = () => {
     const option1 = () => {
         setData(false);
         setData1(true);
+        setProjectType('nojob')
         setData2(false);
         setData3(false);
         setData4(false);
@@ -27,6 +28,7 @@ export const Landpage = () => {
     const option2 = () => {
         setData(false);
         setData1(false);
+        setProjectType('eco')
         setData2(true);
         setData3(false);
         setData4(false);
@@ -36,6 +38,7 @@ export const Landpage = () => {
         setData(false);
         setData1(false);
         setData2(false);
+        setProjectType('youngA')
         setData3(true);
         setData4(false);
     }
@@ -46,10 +49,12 @@ export const Landpage = () => {
         setData2(false);
         setData3(false);
         setData4(true);
+        setProjectType('money')
+
     }
 
     return (
-        <div className="mx-auto max-w-leadScreen mt-[364px] mb-[126px]">
+        <div className="mx-auto max-w-leadScreen mb-[126px]">
             <div className="flex flex-col justify-center items-center gap-5 ">
                 <Typo variant="h1"> Онцох төслүүд </Typo>
                 <Typo variant="body"> Бидний хэрэгжүүлсэн зарим онцлох төслүүд  </Typo>
