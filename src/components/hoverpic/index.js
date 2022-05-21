@@ -57,7 +57,7 @@ export const GirdPic = (props) => {
           <img src={img} type={type} />
           <motion.div
             className={`${hidden ? 'opacity-0' : 'opacity-1'} flex absolute ml-[32px] ${
-              subText === '' ? 'mt-[210px]' : 'mt-[176px]'
+              subText === '' ? 'bottom-[20px]' : 'bottom-[40px]'
             }`}
             animate={hidden ? 'invis' : 'vis'}
             variants={variants}
@@ -68,7 +68,7 @@ export const GirdPic = (props) => {
             </Typography>
           </motion.div>
           <motion.div
-            className={`${hidden ? 'opacity-0' : 'opacity-1'} flex absolute ml-[32px] mt-[210px]`}
+            className={`${hidden ? 'opacity-0' : 'opacity-1'} flex absolute ml-[32px] bottom-[20px]`}
             animate={hidden ? 'invis' : 'vis'}
             variants={variants}
             transition={{ duration: 0.1 }}

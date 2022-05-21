@@ -13,6 +13,11 @@ class MyDocument extends Document {
           <meta charSet="UTF-8" />
           <meta name="geo.placename" content="Ulaanbaatar" />
           <meta name="geo.region" content="MN" />
+          <meta property="og:desription" content="МАНЛАЙЛАГЧ. УР ЧАДВАР. АРДЧИЛАЛ." />
+          <meta property="og:title" content="Lead Alumni Association" />
+          <meta property="og:image" content="/grid-2.webp" />
+          <meta property="twitter:description" content="МАНЛАЙЛАГЧ. УР ЧАДВАР. АРДЧИЛАЛ." />
+          <meta property="twitter:title" content="Lead Alumni Association" />
           <link rel="preconnect" href="https://fonts.googleapis.com" />
           <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
           {/* <link rel="icon" type="image/png" sizes="32x32" href={`${process.env.STATIC_ROOT}/img/logo-full.svg`} /> */}
