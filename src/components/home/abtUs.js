@@ -17,7 +17,7 @@ export const StartUp = () => {
           нийгмийг цогцлооход нэгдсэн нэг гэр бүл
         </Typo>
       </div>
-      <img src="/static/leadie.svg" alt="" width={722} height={188} className=" mt-[50px]" />
+      <img src="/static/shiid.webp" alt="" width={722} height={188} className=" mt-[50px]" />
     </div>
   )
 }

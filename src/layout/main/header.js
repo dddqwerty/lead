@@ -91,7 +91,11 @@ export const Header = () => {
         <div className="hidden md:flex gap-20 lg:flex">
           <Link href={'/'}>
             <a>
-              <div className={`${link === '/' && 'border-b-4 border-primary-main'} py-[24px] hover:cursor-pointer`}>
+              <div
+                className={`${
+                  link === '/' && 'border-b-4 border-primary-main'
+                }  shrink-0 py-[24px] hover:cursor-pointer`}
+              >
                 <Typography variant="body">Нүүр</Typography>
               </div>
             </a>
@@ -99,7 +103,9 @@ export const Header = () => {
           <Link href={'/aboutUs'}>
             <a>
               <div
-                className={`${link === '/aboutUs' && 'border-b-4 border-primary-main'} py-[24px] hover:cursor-pointer`}
+                className={`${
+                  link === '/aboutUs' && 'border-b-4 border-primary-main'
+                } shrink-0 py-[24px] hover:cursor-pointer`}
               >
                 <Typography variant="body">Бидний тухай</Typography>
               </div>
@@ -109,7 +115,9 @@ export const Header = () => {
           <Link href={'/projects'}>
             <a>
               <div
-                className={`${link === '/projects' && 'border-b-4 border-primary-main'} py-[24px] hover:cursor-pointer`}
+                className={`${
+                  link === '/projects' && 'border-b-4 border-primary-main'
+                } py-[24px] shrink-0 hover:cursor-pointer`}
               >
                 <Typography variant="body">Төслүүд</Typography>
               </div>
@@ -130,14 +138,20 @@ export const Header = () => {
 
           <Link href={'/news'}>
             <a>
-              <div className={`${link === '/news' && 'border-b-4 border-primary-main'} py-[24px] hover:cursor-pointer`}>
+              <div
+                className={`${
+                  link === '/news' && 'border-b-4 border-primary-main'
+                } py-[24px] shrink-0 hover:cursor-pointer`}
+              >
                 <Typography variant="body">Мэдээ</Typography>
               </div>
             </a>
           </Link>
           <div
             onClick={() => handleChangeMenu('/lead')}
-            className={`${link === '/lead' && 'border-b-4 border-primary-main'} py-[24px] hover:cursor-pointer`}
+            className={`${
+              link === '/lead' && 'border-b-4 border-primary-main'
+            } py-[24px] shrink-0 hover:cursor-pointer`}
           >
             <Typography variant="body">Lead</Typography>
           </div>

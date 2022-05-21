@@ -44,7 +44,7 @@ export const Shiid = (props) => {
 
         <div className="relative hidden md:block w-[407px] h-[405px]">
           <div className="w-[407px] h-[405px]">
-            <img src="/static/shiid.svg" />
+            <img src="/static/shiid1.webp" />
           </div>
           <div className="absolute left-[100px] top-[170px] z-10">
             <Typo variant="h1" className="text-white -tracking-[8.5%]">

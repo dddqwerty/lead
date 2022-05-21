@@ -23,7 +23,7 @@ export const Medeefourth = () => {
         хялбарчлагдаж QR код уншуулан ирцийн мэдээгээ илгээх боломжтой юм. Бид нар аппликейшнээ сар орчмын хугацаанд
         хөгжүүлсэн. Аппликейшн маань дараах 3 дэд хэсгээс бүрдэнэ.{' '}
       </Typo>
-      <img src="/static/medee.svg" className="mt-[32px]"></img>
+      <img src="/static/mede1.webp" className="mt-[32px]"></img>
     </div>
   )
 }
