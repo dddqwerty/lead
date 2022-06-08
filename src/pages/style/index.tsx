@@ -49,6 +49,13 @@ export default function In() {
           </Typography>
         </a>
       </Link>
+      <Link href={'/style/test'}>
+        <a>
+          <Typography variant="body-bold" className="text-primary-black hover:underline">
+            Go to the test page
+          </Typography>
+        </a>
+      </Link>
       <Link href={'/style/prob'}>
         <a>
           <Typography variant="body-bold" className="text-primary-black hover:underline">
