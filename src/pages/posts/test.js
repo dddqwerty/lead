@@ -1,36 +1,40 @@
 import { getAllPosts } from './fetch'
 
 export const Datas = ({ res }) => {
-  return (
-    <div>
-      {res.map((x, i) => {
-        return (
-          <div key={i}>
-            {' '}
-            Slug: {x.slug} , int: {x.integers}{' '}
-          </div>
-        )
-      })}
-    </div>
-  )
+  console.log(res)
+  return <div>results</div>
 }
 
 export async function getStaticProps() {
   const data = await getAllPosts(
-    'productsCollection',
+    'pagesCollection',
     `
     items{
-      slug
-      integers
-      connection
-      thumb {
-        title
-        width
-        height
-        url
+      homePageCollection(limit: 20){
+        items{
+          ... on AmountOfPeople{
+            amount
+            type
+          }
+        }
+      }
+      aboutUsPageCollection(limit: 20){
+        items{
+          ... on AboutUsInfo{
+             info
+             title
+             img{
+              url
+            }
+           }
+         ... on AbtLead{
+           option
+           info
+        }
+        }
       }
     }
-    `,
+  `,
   )
 
   return {
