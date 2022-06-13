@@ -62,7 +62,7 @@ export const Landpage = () => {
     return (
         <div className={`mb-[80px] md:mb-[126px] ${PADDINGX}`}>
             <div className="flex flex-col justify-center md:items-center gap-5 ">
-                <Typo variant={matches ? "body-mobile" : "h1"} className="font-bold"> Онцох төслүүд </Typo>
+                <Typo variant={matches ? "body-mobile" : "h1"} className="font-bold"> Онцлох төслүүд </Typo>
                 <Typo className="hidden md:block" variant="body"> Бидний хэрэгжүүлсэн зарим онцлох төслүүд  </Typo>
             </div>
             <div className="grid grid-cols-2 md:grid-cols-5 md:grid-flow-row gap-4 mt-16">
