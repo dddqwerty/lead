@@ -31,3 +31,15 @@ const entries = await fetchGraphQL(
 
 return extractPostEntries(entries , contentType); 
 };
+
+export async function getAllPostsWithId(contentType: any , datas: any) {
+    const entries = await fetchGraphQL(
+       `query {
+          ${contentType} {
+              ${datas}
+          }
+       }`
+    ); 
+
+    extractPostEntries(entries , contentType); 
+}; 
