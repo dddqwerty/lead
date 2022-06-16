@@ -1,86 +1,39 @@
 import CustomButton from "components/button";
 import Typo from "components/typography";
 import { toUpper } from "lodash";
-import { useEffect } from "react";
 import { useState } from "react";
 import { useTheme } from '@mui/material/styles'
 import useMediaQuery from '@mui/material/useMediaQuery'
+import Image from "next/image";
 
-const obj = [
-    ['Dulguun', 'chairman', 'Img.svg'],
-    ['E. Dulguun', 'Hackerman', 'Img.svg'],
-    ['noName', 'Officer', 'Img.svg'],
-    ['noName', 'Broker', 'Img.svg'],
-    ['noName', 'noType', 'Img.svg'],
-    ['noName', 'noType', 'Img.svg'],
-    ['noName', 'Racer', 'Img.svg'],
-    ['noName', 'Dropping', 'Img.svg'],
-    ['noName', 'Bomber', 'Img.svg'],
-    ['noName', 'Hmm', 'Img.svg'],
-    ['noName', 'Idk', 'Img.svg'],
-    ['noName', 'Idek', 'Img.svg'],
-];
-
-const obj1 = [
-    ['Bryan', 'Manager', 'img1.svg'],
-    ['Unknown', 'HackerMan', 'img1.svg'],
-    ['noName', 'Officer', 'Img.svg'],
-    ['noName', 'Broker', 'Img.svg'],
-    ['noName', 'noType', 'Img.svg'],
-    ['noName', 'noType', 'Img.svg'],
-    ['noName', 'Racer', 'Img.svg'],
-    ['noName', 'Dropping', 'Img.svg'],
-    ['noName', 'Bomber', 'Img.svg'],
-    ['noName', 'Hmm', 'Img.svg'],
-    ['noName', 'Idk', 'Img.svg'],
-    ['noName', 'Idek', 'Img.svg'],
-];
-
-const obj2 = [
-    ['Dulguun', 'CHAIRMAN', 'Img.svg'],
-    ['Unknown', 'HackerMan', 'Img.svg'],
-    ['noName', 'Officer', 'Img.svg'],
-    ['noName', 'Broker', 'Img.svg'],
-    ['noName', 'noType', 'Img.svg'],
-    ['noName', 'noType', 'Img.svg'],
-    ['noName', 'Racer', 'Img.svg'],
-    ['noName', 'Dropping', 'Img.svg'],
-    ['noName', 'Bomber', 'Img.svg'],
-    ['noName', 'Hmm', 'Img.svg'],
-    ['noName', 'Idk', 'Img.svg'],
-    ['noName', 'Idek', 'Img.svg'],
-];
-
-
-export const Workers = () => {
+export const Workers = ({wks19 , wks20 , wks22}) => {
+    const workers19 =  wks19.items.filter((value: any) => Object.keys(value).length !== 0);
+    const workers20 =  wks20.items.filter((value: any) => Object.keys(value).length !== 0);
+    const workers22 = wks22.items.filter((value: any) => Object.keys(value).length !== 0); 
     const theme = useTheme()
     const matches = useMediaQuery(theme.breakpoints.down('sm'))
-    const [data, setData] = useState<any>(obj);
+    const [data, setData] = useState<any>(workers22);
     const [def, setDef] = useState<boolean>(true);
     const [def1, setDef1] = useState<boolean>(false);
     const [def2, setDef2] = useState<boolean>(false);
     const [toggle, setToggle] = useState<any>(null);
 
-    useEffect(() => {
-        console.log(toggle);
-    }, [toggle]);
-
     const option = () => {
-        setData(obj);
+        setData(workers22);
         setDef(true);
         setDef1(false);
         setDef2(false);
     }
 
     const option1 = () => {
-        setData(obj1);
+        setData(workers20);
         setDef(false);
         setDef1(true);
         setDef2(false);
     }
 
     const option2 = () => {
-        setData(obj2);
+        setData(workers19);
         setDef(false);
         setDef1(false);
         setDef2(true);
@@ -99,12 +52,12 @@ export const Workers = () => {
                 {data.map((x: any, i: number) => {
                     return <div key={i}>
                         <div className="flex flex-col justify-end w-full bg-gradient-to-t from-gray-700 to-gray-0 hover:cursor-pointer" onMouseEnter={() => setToggle(i)} onMouseLeave={() => setToggle(null)}>
-                            <img src={`/static/${x[2]}`} alt="" width={'184px'} height={'284px'} className="hover:mix-blend-overlay" />
+                            <Image src={x.image.url} alt="" width={184} height={256} className="hover:mix-blend-overlay" />
                             <div className={`flex flex-col absolute ml-4 pointer-events-none ${toggle == i ? 'visible' : 'hidden'}`}>
                                 <div className="flex flex-col bg-primary-main justify-center text-center text-white w-28 h-8 mb-1">
-                                    <Typo variant="body-semibold" className="text-sm"> {toUpper(x[1])} </Typo>
+                                    <Typo variant="body-semibold" className="text-sm"> {toUpper(x.type)} </Typo>
                                 </div>
-                                <Typo variant="h3" className="text-white"> {x[0]} </Typo>
+                                <Typo variant="h3" className="text-white"> {x.name} </Typo>
                             </div>
                         </div>
                     </div>

@@ -7,7 +7,7 @@ export const GirdPic = (props) => {
   const [hidden, sethidden] = useState(true)
   const [reclose, setReclose] = useState(false)
 
-  const { img, text, subText = '', type } = props
+  const { img, text, subText = '', type, link } = props
 
   const Hoverr = () => {
     if (hidden) {
@@ -31,7 +31,7 @@ export const GirdPic = (props) => {
   }
 
   return (
-    <div className="w-full overflow-hidden relative">
+    <div className="w-full overflow-hidden relative cursor-pointer" onClick={() => (window.location.href = link)}>
       <div
         className={`flex  `}
         onMouseEnter={() => {
@@ -54,7 +54,7 @@ export const GirdPic = (props) => {
           transition={{ duration: 0.4 }}
         />
         <div className="flex">
-          <img src={img} type={type} />
+          <img src={img} type={type} style={{ width: '380px', height: '264px' }} />
           <motion.div
             className={`${hidden ? 'opacity-0' : 'opacity-1'} flex absolute ml-[32px] ${
               subText === '' ? 'bottom-[20px]' : 'bottom-[40px]'

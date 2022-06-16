@@ -5,8 +5,9 @@ import { ImgTxt } from 'components'
 import Information from 'components/info'
 import { MainLayout } from 'layout'
 import { PADDINGX } from 'constants/layout'
+import { getAllPosts } from './posts/fetch'
 
-export default function Test() {
+export default function Test({ wks19, wks20, wks22, info }) {
   return (
     <MainLayout classname={`mx-auto max-w-leadScreen ${PADDINGX}`}>
       <div className="h-32" />
@@ -28,8 +29,92 @@ export default function Test() {
       </div>
 
       <Goalies />
-      <Workers />
-      <Information />
+      <Workers wks19={wks19} wks20={wks20} wks22={wks22} />
+      <Information datas={info} />
     </MainLayout>
   )
+}
+
+export async function getStaticProps() {
+  const wks19 = await getAllPosts(
+    'pagesCollection',
+    `
+   items{
+    aboutUsPageCollection(limit: 20){
+      items{
+        ... on Workers20182019{
+           type
+           name
+           image{
+             url
+           }
+        }
+      }
+    }
+  }
+`,
+  )
+
+  const wks20 = await getAllPosts(
+    'pagesCollection',
+    `
+items{
+  aboutUsPageCollection(limit: 30){
+    items{
+      ... on Workers20192020{
+         type
+         name
+         image{
+           url
+         }
+     }
+   }
+  }
+ }
+ `,
+  )
+
+  const wks22 = await getAllPosts(
+    'pagesCollection',
+    `
+ items{
+  aboutUsPageCollection(limit: 40){
+    items{
+      ... on Workers20212022{
+         type
+         name
+         image{
+           url
+         }
+       }
+     }
+    }
+   }
+ `,
+  )
+
+  const infoDatas = await getAllPosts(
+    'pagesCollection',
+    `
+items{
+  aboutUsPageCollection(limit: 40){
+    items{
+      ... on AbtLead{
+         option
+         info
+       }
+     }
+    }
+   }
+ `,
+  )
+
+  return {
+    props: {
+      wks19: wks19[0]?.aboutUsPageCollection,
+      wks20: wks20[0]?.aboutUsPageCollection,
+      wks22: wks22[0]?.aboutUsPageCollection,
+      info: infoDatas[0]?.aboutUsPageCollection,
+    },
+  }
 }

@@ -4,25 +4,24 @@ import router from 'next/router'
 import { useAppContext } from 'context/cont'
 import { HomeFirst } from 'components/home/homefirst'
 import HomeSecond from 'components/home/homesec'
-import HomeThird from 'components/home/homethird'
 import News from 'components/home/news'
 import Landpage from 'components/landpages/land'
 import Support from 'components/oursup'
 import { PADDINGX } from 'constants/layout'
+import { getAllPosts } from './posts/fetch'
 
-export const Home = () => {
+export const Home = ({ fs, sc, thrd }) => {
   const { setLink } = useAppContext()
 
   return (
     <MainLayout>
       <HomeFirst />
-      <HomeSecond />
-      <HomeThird />
+      <HomeSecond datas={fs} />
       <div className="mt-9">
         <div className="md:mt-[380px]">
           <Landpage className="mx-auto max-w-leadScreen" />
         </div>
-        <GridMain />
+        <GridMain datas={sc} />
         <div className="flex justify-center mt-[64px]">
           <Button
             variant="ghost"
@@ -33,7 +32,7 @@ export const Home = () => {
             Дэлгэрэнгүй
           </Button>
         </div>
-        <News />
+        <News datas={thrd} />
         <Support className={PADDINGX} />
       </div>
     </MainLayout>
@@ -41,3 +40,68 @@ export const Home = () => {
 }
 
 export default Home
+
+export async function getStaticProps() {
+  const datas = await getAllPosts(
+    'pagesCollection',
+    `
+   items{
+    homePageCollection{
+      items{
+        ... on AmountOfPpl{
+           type 
+           amount
+           }
+         }
+       }
+      }
+   `,
+  )
+
+  const gridMain = await getAllPosts(
+    'pagesCollection',
+    `
+      items{
+       leadPrjsCollection(limit: 20){
+         items{
+           prjType
+           title
+           subTxt
+           media{
+             url
+          }
+          id
+        }
+      }
+    }
+   `,
+  )
+
+  const news = await getAllPosts(
+    'pagesCollection',
+    `
+   items{
+    homePageCollection(limit: 20){
+     items{
+       ... on News{
+         topic
+         info
+         date
+         image{
+           url
+        }
+      } 
+    }    
+   }
+  }
+   `,
+  )
+
+  return {
+    props: {
+      fs: datas[0]?.homePageCollection,
+      sc: gridMain[0]?.leadPrjsCollection,
+      thrd: news[0]?.homePageCollection,
+    },
+  }
+}

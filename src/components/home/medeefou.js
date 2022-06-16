@@ -1,29 +1,22 @@
 import Typo from 'components/typography'
 import { useTheme } from '@mui/material/styles'
 import useMediaQuery from '@mui/material/useMediaQuery'
+import Image from 'next/image'
 
-export const Medeefourth = () => {
+export const Medeefourth = ({ datas }) => {
+  let itms = datas.items[3]
   const theme = useTheme()
   const matches = useMediaQuery(theme.breakpoints.down('sm'))
   return (
     <div className="flex flex-col">
-      <Typo variant={matches ? 'body-mobile' : 'h2'}>
-        Д. Жанчив: Технологийн хөгжил бидний амьдралыг илүү хялбарчилна.
-      </Typo>
+      <Typo variant={matches ? 'body-mobile' : 'h2'}>{itms.title}</Typo>
       <Typo variant="body" className="mt-[32px]">
-        Би технологийн салбарт 10 дахь жилдээ ажиллаж байна. Улс нийгэмдээ хэрэгтэй, хүний өдөр тутмын асуудлыг шийдэж
-        чаддаг учраас технологи, программ хангамжийн салбарт ажиллахдаа урам зоригтой байдаг. Манай байгууллага өмнө нь
-        төрийн албаны шалгалт өгөхөд туслах E-Test, унадаг дугуйны UBike зэрэг аппликейшнүүдийг хөгжүүлсэн туршлагатай.
-        Төрийн болон бизнесийн байгууллагуудын дунд зэрэглэлийн системүүдэд төвлөрч ажиллаад 5 жил болж байна.
+        {itms.info.slice(0, 437)}
       </Typo>
       <Typo variant="body" className="mt-[24px]">
-        Хамгийн сүүлд Сонгуулийн ерөнхий хороо, ЛИЙД төгсөгчдийн холбоотой хамтран сонгуулийн ирцийг 12 насны ангилал,
-        газарзүйн байршлаар нарийвчилж харуулах гар утасны аппликейшнийг бүтээлээ. Өмнө нь сонгуулийн хэсгийн хороод
-        утсаар ярих байдлаар мэдээллээ солилцдог байсан бол гар утасны аппликейшн нэвтэрснээр энэхүү үйл явц
-        хялбарчлагдаж QR код уншуулан ирцийн мэдээгээ илгээх боломжтой юм. Бид нар аппликейшнээ сар орчмын хугацаанд
-        хөгжүүлсэн. Аппликейшн маань дараах 3 дэд хэсгээс бүрдэнэ.{' '}
+        {itms.info.slice(437, 927)}
       </Typo>
-      <img src="/static/mede1.webp" className="mt-[32px]"></img>
+      <Image src={itms.img.url} className="mt-[32px]" width={1224} height={402} />
     </div>
   )
 }
