@@ -11,7 +11,7 @@ type Props = {
 }
 
 
-export const Information: FC = (): ReactElement => {
+export const Information: FC = ({datas}: any): ReactElement => {
 
     const [tailbar, setTailbar] = useState<boolean>(false);
     const [zorilgo, setZorilgo] = useState<boolean>(false);
@@ -19,6 +19,7 @@ export const Information: FC = (): ReactElement => {
     const [cont, setCont] = useState<boolean>(false);
     const [read, setRead] = useState<boolean>(true);
     const [data, setData] = useState<any>();
+    const information =  datas.items.filter((value: any) => Object.keys(value).length !== 0);
 
     const DetailedInfo = (props: Props) => {
 
@@ -35,20 +36,20 @@ export const Information: FC = (): ReactElement => {
 
     const infos = {
         tailbar: {
-            title: 'Тайлбар',
-            info: "ЛИЙД Төгсөгчдийн Холбоо (ЛТХ)-ны анхны удирдлагын баг нь 2018-2019 онд 11 гишүүний бүрэлдэхүүнтэй, ТУЗ-ийн даргаар М.Золжаргал (US 2017) сонгогдон ажилласан юм. 2018 оны 7-р сард албан ёсоор төрийн бус байгууллага болон үүсгэн байгуулагдсан цагаас холбооны стратегийн тэргүүлэх чиглэлийг тодорхойлох, байгууллагын бүтэц, соёлыг ул суур...",
+            title: information[0].option,
+            info: information[0].info,
         },
         zorilgo: {
-            title: 'Зорилго',
-            info: 'Хараахан орж ирээгүй',
+            title: information[1].option,
+            info: information[1].info,
         },
         zuils: {
-            title: 'Хийсэн зүйлс',
-            info: 'Хараахан орж ирээгүй',
+            title: information[2].option,
+            info: information[2].info,
         },
         cont: {
-            title: 'Үргэлжлэл бий',
-            info: 'Үргэлжлэлтэй...',
+            title: information[3].option,
+            info: information[3].info,
         }
     };
 
