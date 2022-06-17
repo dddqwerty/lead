@@ -87,6 +87,9 @@ export const Header = () => {
           <div className="hidden lg:block">
             <CustomAccordion items={[]} />
           </div>
+          <div onClick={() => handleChangeMenu('lead')} className=" hover:cursor-pointer">
+            Lead
+          </div>
         </div>
         <div className="hidden md:flex gap-20 lg:flex">
           <Link href={'/'}>
