@@ -4,6 +4,7 @@ import { PADDINGX } from 'constants/layout'
 import { useState } from 'react'
 import { useTheme } from '@mui/material/styles'
 import useMediaQuery from '@mui/material/useMediaQuery'
+import { saveAs } from 'file-saver'
 
 export const Shiid = (props) => {
   const { posistion } = props
@@ -14,6 +15,14 @@ export const Shiid = (props) => {
   const toggleRead = () => {
     setRead(!read)
   }
+
+  const saveFile = () => {
+    saveAs(
+      'http://www.leadalumni.org/TAAP/TAAP_Toolkit_and_Guide_for_Inclusive_Development_Mongolian.pdf',
+      'example.pdf',
+    )
+  }
+
   return (
     <div className={`mx-auto max-w-leadScreen grid ${PADDINGX}`}>
       <div className="mt-[129px]" />
@@ -32,8 +41,8 @@ export const Shiid = (props) => {
             Тэгш хамарсан хөгжлийн арга хэрэгсэл, заавар
           </Typo>
 
-          <div className="flex items-center mt-[48px] md:mt-[96px]">
-            <div className="relative bg-slate-200 w-14 h-14 rounded-full hover:cursor-pointer ">
+          <div className="flex items-center mt-[48px] md:mt-[96px]" onClick={saveFile}>
+            <div className="relative bg-slate-200 w-14 h-14 rounded-full hover:cursor-pointer">
               <img src="/static/Group.svg" className="absolute left-[20px] top-[16px]" />
             </div>
             <Typo variant="body-semibold" className="ml-5 hover:cursor-pointer text-[#404040]">

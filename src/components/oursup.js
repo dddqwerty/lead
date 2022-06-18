@@ -9,7 +9,7 @@ export const Support = ({ className }) => {
     <div className={`mt-[100px] max-w-leadScreen mx-auto ${className}`}>
       <Typography
         variant={matches ? 'body-mobile' : 'h1'}
-        className="text-[#0F233E] text-center md:text-left flex justify-center"
+        className="flex justify-center text-left md:text-center text-[#0F233E]"
       >
         Биднийг дэмжигч, хамтрагч байгууллагууд
       </Typography>

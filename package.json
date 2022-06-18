@@ -17,6 +17,7 @@
     "@emotion/styled": "^11.8.1",
     "@mui/material": "^5.6.3",
     "contentful": "^9.1.32",
+    "file-saver": "^2.0.5",
     "framer-motion": "^6.3.3",
     "lodash": "^4.17.21",
     "lottie-colorify": "^0.8.0",
@@ -38,6 +39,7 @@
     ]
   },
   "devDependencies": {
+    "@types/file-saver": "^2.0.5",
     "@types/node": "^17.0.30",
     "@types/react": "^18.0.8",
     "@types/react-lottie": "^1.2.6",

@@ -9,19 +9,28 @@ export const Footer = () => {
           <img src="/static/lead-white-logo.svg" className="w-[140px]"></img>
         </div>
         <div className="flex w-full justify-center relative gap-[24px]">
-          <div className="h-[40px] w-[40px] items-center justify-center flex border-border-grey border-solid border rounded-full z-10 bg-blackLgiht">
+          <div
+            className="h-[40px] w-[40px] items-center justify-center flex border-border-grey border-solid border rounded-full z-10 bg-blackLgiht cursor-pointer"
+            onClick={() => window.open('https://www.facebook.com/LEADAlumniAssociation/', '_blank')}
+          >
             {handleIcon({
               icon: 'facebook',
               size: '20',
             })}
           </div>
-          <div className="h-[40px] w-[40px] items-center justify-center flex border-border-grey border-solid border rounded-full z-10 bg-blackLgiht">
+          <div
+            className="h-[40px] w-[40px] items-center justify-center flex border-border-grey border-solid border rounded-full z-10 bg-blackLgiht cursor-pointer"
+            onClick={() => window.open('https://www.instagram.com/leadalumniassociation/?hl=en', '_blank')}
+          >
             {handleIcon({
               icon: 'instagram',
               size: '20',
             })}
           </div>
-          <div className="h-[40px] w-[40px] items-center justify-center flex border-border-grey border-solid border rounded-full z-10 bg-blackLgiht">
+          <div
+            className="h-[40px] w-[40px] items-center justify-center flex border-border-grey border-solid border rounded-full z-10 bg-blackLgiht cursor-pointer"
+            onClick={() => window.open('https://twitter.com/MongoliaLeads', '_blank')}
+          >
             {handleIcon({
               icon: 'twitter',
               size: '20',
@@ -32,10 +41,6 @@ export const Footer = () => {
         <Typography variant="subhead" className="text-center">
           © Зохиогчийн бүх эрх Нэст Академид <br /> харьяалагдана. 2022 он
         </Typography>
-        {/* <div className="w-[296px] h-[36px] text-center leading-18 text-subh">
-
-          
-        </div> */}
       </div>
     </footer>
   )

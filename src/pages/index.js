@@ -80,20 +80,20 @@ export async function getStaticProps() {
   const news = await getAllPosts(
     'pagesCollection',
     `
-   items{
-    homePageCollection(limit: 20){
-     items{
-       ... on News{
-         topic
+    items{
+      leadNewsPageCollection(limit: 4){
+        items{
+          date
+          title
+          img{
+            url
+         }
          info
-         date
-         image{
-           url
-        }
-      } 
-    }    
-   }
-  }
+         profession
+         id
+       }
+     }
+   } 
    `,
   )
 
@@ -101,7 +101,7 @@ export async function getStaticProps() {
     props: {
       fs: datas[0]?.homePageCollection,
       sc: gridMain[0]?.leadPrjsCollection,
-      thrd: news[0]?.homePageCollection,
+      thrd: news[0]?.leadNewsPageCollection,
     },
   }
 }

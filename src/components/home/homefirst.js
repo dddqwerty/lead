@@ -59,17 +59,26 @@ export const HomeFirst = () => {
               </Typography>
             </motion.div>
           </div>
-          <motion.div className="flex items-center" variants={item} whileInView={'visible'} viewport={{ once: false }}>
-            <div className="bg-slate-200 w-7 h-7 md:w-14 md:h-14 rounded-full hover:cursor-pointer" />
+          <motion.div
+            className="flex items-center"
+            variants={item}
+            whileInView={'visible'}
+            viewport={{ once: false }}
+            onClick={() => window.open('https://www.youtube.com/channel/UCm32dHM_uDXZxG0t_C49nXg', '_blank')}
+          >
+            <img
+              src="/static/play.png"
+              className="bg-slate-100 w-7 h-7 md:w-14 md:h-14 rounded-full hover:cursor-pointer"
+            />
             <Typography variant={matches ? 'subhead' : 'body-semibold'} className="ml-5 hover:cursor-pointer">
               Бичлэг үзэх
             </Typography>
           </motion.div>
         </div>
       </motion.div>
-      {/* <div>
-        <img src="/static/lead-home-Img1.jpeg"/>
-      </div> */}
+      <div className="w-[818px] h-[788.8px] hidden md:block absolute -top-[38px] left-[700px]">
+        <img src="/static/home1.jpg" />
+      </div>
     </div>
   )
 }
