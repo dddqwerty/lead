@@ -8,7 +8,7 @@ export const Medeefirst = ({ datas }) => {
   const theme = useTheme()
   const matches = useMediaQuery(theme.breakpoints.down('sm'))
   return (
-    <div className="flex flex-col gap-8">
+    <div className="flex flex-col gap-8 max-w-leadScreen mx-auto">
       <Typo variant="h3" className="text-primary-dark">
         {' '}
         {newsData.date.slice(0, 10)}{' '}

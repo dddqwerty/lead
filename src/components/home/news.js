@@ -5,6 +5,7 @@ import { motion } from 'framer-motion'
 import { useTheme } from '@mui/material/styles'
 import useMediaQuery from '@mui/material/useMediaQuery'
 import { useState } from 'react'
+import Image from 'next/image'
 
 export const News = ({ datas }) => {
   console.log(datas.items)
@@ -58,11 +59,11 @@ export const News = ({ datas }) => {
             Шинэ Мэдээ, Мэдээлэл
           </Typography>
         </div>
-        <div className="flex md:flex-row flex-col  gap-6">
+        <div className="flex md:flex-row flex-col gap-6">
           <motion.div variants={item}>
-            <div className="flex flex-col gap-6 rounded-lg shadow-[0_0_24px_rgba(0,0,0,0.05)] max-w-[601px] px-8 pt-8 border-[0.5px] border-solid border-[rgba(15, 35, 62, 0.15)]">
+            <div className="flex flex-col gap-6 rounded-lg shadow-[0_0_24px_rgba(0,0,0,0.05)] max-w-[601px] px-8 pt-8 border-[0.5px] border-solid border-[rgba(15, 35, 62, 0.15)] h-[678px]">
               <div>
-                <img src={newsDatas[0].image.url} />
+                <Image src={newsDatas[0].image.url} width={537} height={281} />
               </div>
               <div className="flex flex-col max-w-[408px]">
                 <Typography variant="body-bold" className="text-primary-dark">
@@ -70,8 +71,8 @@ export const News = ({ datas }) => {
                 </Typography>
                 <div className="flex flex-col gap-2">
                   <Typography variant={matches ? 'mobile' : 'h3'}>{newsDatas[0].topic}</Typography>
-                  <div className="flex flex-col gap-[67px] mb-[52px]">
-                    <Typography variant="body">
+                  <div className="flex flex-col mb-[52px]">
+                    <Typography variant="body" className="h-[151px] overflow-y-auto">
                       {newsDatas[0] && newsDatas[0].info && read
                         ? `${newsDatas[0].info.slice(0, newsDatas[0].info.length / 2)}.....`
                         : newsDatas[0] && newsDatas[0].info
@@ -89,36 +90,40 @@ export const News = ({ datas }) => {
           </motion.div>
           <div className="flex flex-col gap-6">
             <motion.div variants={item}>
-              <div className="flex flex-col gap-6 rounded-lg shadow-[0_0_24px_rgba(0,0,0,0.05)] max-w-[601px] px-8 pt-8 border-[0.5px] border-solid border-[rgba(15, 35, 62, 0.15)]">
+              <div className="flex flex-col gap-6 rounded-lg shadow-[0_0_24px_rgba(0,0,0,0.05)] max-w-[601px] px-8 pt-8 border-[0.5px] border-solid border-[rgba(15, 35, 62, 0.15)] h-[327px]">
                 <div>
-                  <img src={newsDatas[1].image.url} />
+                  <Image src={newsDatas[1].image.url} width={537} height={133} />
                 </div>
                 <div className="flex flex-col max-w-[434px]">
                   <Typography variant="body-bold" className="text-primary-dark">
                     {newsDatas[1].date.slice(0, 10)}
                   </Typography>
                   <div className="flex flex-col gap-2">
-                    <Typography variant={matches ? 'mobile' : 'h3'}>{newsDatas[1].topic}</Typography>
+                    <Typography variant={matches ? 'mobile' : 'h3'} className="h-[56px] truncate">
+                      {newsDatas[1].topic}
+                    </Typography>
                     <div className="mb-5">
-                      <Typography> {newsDatas[1].info} </Typography>
+                      <Typography className="truncate"> {newsDatas[1].info} </Typography>
                     </div>
                   </div>
                 </div>
               </div>
             </motion.div>
             <motion.div variants={item}>
-              <div className="flex flex-col gap-6 rounded-lg shadow-[0_0_24px_rgba(0,0,0,0.05)] max-w-[601px] px-8 pt-8 border-[0.5px] border-solid border-[rgba(15, 35, 62, 0.15)]">
+              <div className="flex flex-col gap-6 rounded-lg shadow-[0_0_24px_rgba(0,0,0,0.05)] max-w-[601px] px-8 pt-8 border-[0.5px] border-solid border-[rgba(15, 35, 62, 0.15)] h-[327px]">
                 <div>
-                  <img src={newsDatas[2].image.url} />
+                  <Image src={newsDatas[2].image.url} width={537} height={133} />
                 </div>
                 <div className="flex flex-col max-w-[434px]">
                   <Typography variant="body-bold" className="text-primary-dark">
                     {newsDatas[2].date.slice(0, 10)}
                   </Typography>
                   <div className="flex flex-col gap-2">
-                    <Typography variant={matches ? 'mobile' : 'h3'}>{newsDatas[2].topic}</Typography>
+                    <Typography variant={matches ? 'mobile' : 'h3'} className="h-[56px] truncate">
+                      {newsDatas[2].topic}
+                    </Typography>
                     <div className="mb-5">
-                      <Typography> {newsDatas[2].info} </Typography>
+                      <Typography className="truncate"> {newsDatas[2].info} </Typography>
                     </div>
                   </div>
                 </div>

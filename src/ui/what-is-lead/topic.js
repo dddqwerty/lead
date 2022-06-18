@@ -6,7 +6,7 @@ import demand from '../../../public/static/demand.json'
 
 export const Topic = () => {
   return (
-    <div className="flex md:gap-[59px] w-full mt-[115.42px] mb-[215px]">
+    <div className="flex md:gap-[59px] w-full mt-[115.42px] mb-[215px] max-w-leadScreen mx-auto relative">
       <div className="flex flex-col gap-10 w-full">
         <div className="flex flex-col gap-6 w-full">
           <Typography variant="h3" className="text-center md:text-left">
@@ -78,8 +78,8 @@ export const Topic = () => {
           </div>
         </div>
       </div>
-      <div>
-        <img src="/static/topic.webp" className="w-[702px] hidden md:block absolute top-[1470px] left-[600px]" />
+      <div className="w-[702px] hidden md:block absolute -top-[150px] left-[600px]">
+        <img src="/static/topic.webp" />
       </div>
     </div>
   )

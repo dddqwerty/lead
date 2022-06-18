@@ -46,18 +46,24 @@ export const Prob = () => {
   }
 
   return (
-    <MainLayout classname={'mx-auto max-w-leadScreen'}>
+    <div className="mx-auto max-w-leadScreen mb-[164px] flex flex-col gap-[72px]">
+      <div className="flex justify-center">
+        <div className="flex flex-col gap-6 max-w-[392px] text-center">
+          <Typo variant="h3"> Ямар боломжууд нээгдэх вэ? </Typo>
+          <Typo variant="body"> LEAD хөтөлбөрт хамрагдсанаар та бүхэнд дараах боломж олгогдох юм. </Typo>
+        </div>
+      </div>
       <div className="grid grid-cols-2 gap-14">
         <PrbComp gif="star" info="Ижил хүсэл эрмэлзэл бүхий залуустай танилцах, тэднээс суралцах, хамтарч ажиллах" />
-        <PrbComp gif="dem" info="Иргэдийн оролцоотой хэрхэн шийдвэрлэх талаар мэдлэг чадвартай болох юм" />
-        <PrbComp gif="beth" info="Эх орондоо сайн сайхан ирээдүйг цогцлооход гар бие оролцох" />
         <PrbComp gif="consult" info="Салбартаа арвин туршлагатай ментор буюу зөвлөхүүдээс суралцах, зөвлөгөө авах" />
+        <PrbComp gif="dem" info="Иргэдийн оролцоотой хэрхэн шийдвэрлэх талаар мэдлэг чадвартай болох юм" />
         <PrbComp
           gif="pencil"
           info="Нийгэмд эерэг өөрчлөлт авчрах төсөл дээр сурч авсан шинэ мэдлэг чадвараа практик дээр ашиглах"
         />
+        <PrbComp gif="beth" info="Эх орондоо сайн сайхан ирээдүйг цогцлооход гар бие оролцох" />
       </div>
-    </MainLayout>
+    </div>
   )
 }
 
