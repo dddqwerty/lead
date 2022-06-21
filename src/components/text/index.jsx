@@ -11,8 +11,7 @@ export const TextBox = (props) => {
     <div className="flex flex-col justify-center items-center md:gap-[16px]">
       <div className="text-primary-main">
         <Typography variant={matches ? 'h3' : 'h1'} className="leading-[58px] font-[48px] font-bold">
-          {' '}
-          {number}{' '}
+          {number}
         </Typography>
       </div>
       <Typography variant={matches ? 'mobile' : 'h3'} className="text-[#0F233E]">

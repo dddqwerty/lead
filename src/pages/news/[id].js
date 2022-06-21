@@ -10,40 +10,37 @@ import { PADDINGX } from 'constants/layout'
 import { Oval } from 'react-loader-spinner'
 import Image from 'next/image'
 
-export const SpecDatas = ({ projects, para }) => {
+export const SpecNews = ({ news, para }) => {
   const [data, setData] = useState(null)
   const [id, setId] = useState(null)
-  console.log(projects, para)
-
   const theme = useTheme()
   const matches = useMediaQuery(theme.breakpoints.down('sm'))
-
-  useEffect(() => {
-    if (para !== undefined) {
-      setId(Number(para.id))
-      setData(projects[0]?.leadPrjsCollection?.items[id])
-    }
-  }, [id, para, data, projects])
-
   const router = useRouter()
 
-  if (!router.isFallback && !projects) {
+  useEffect(() => {
+    if (para != undefined) {
+      setId(Number(para.id))
+      setData(news[0]?.leadNewsPageCollection?.items[id])
+    }
+  }, [id, para, data, news])
+
+  if (!router.isFallback && !news) {
     return <ErrorPage statusCode={404} />
   }
 
-  if (!router.isFallback && projects[0]?.leadPrjsCollection?.items[id] == null) {
+  if (!router.isFallback && news[0]?.leadNewsPageCollection?.items[id] == null) {
     return <ErrorPage statusCode={404} />
   }
 
   return (
     <div>
-      {projects && id !== null && data ? (
+      {news && id !== null && data ? (
         <MainLayout classname={`flex flex-col gap-[104px] ${PADDINGX}`}>
           <div className="flex flex-col mt-[120px]">
             <Typo
               variant="h3"
               className="flex items-center text-primary-main cursor-pointer gap-[13px]"
-              onClick={() => (window.location.href = '/projects')}
+              onClick={() => (window.location.href = '/news/page')}
             >
               <img src="/static/ret.png" alt="" className="w-[21px] h-[21px]" /> Буцах
             </Typo>
@@ -52,8 +49,8 @@ export const SpecDatas = ({ projects, para }) => {
                 {data.date.slice(0, 10)}
               </Typo>
               <Typo variant={matches ? 'body-mobile' : 'h2'}> {data.title} </Typo>
-              <Image src={data.specImg.url} alt="" width={1224} height={402} />
-              <Typo variant="body">{data.specInfo}</Typo>
+              <Image src={data.img.url} alt="" width={1224} height={402} />
+              <Typo variant="body">{data.info}</Typo>
             </div>
           </div>
         </MainLayout>
@@ -74,30 +71,32 @@ export const SpecDatas = ({ projects, para }) => {
   )
 }
 
-export default SpecDatas
+export default SpecNews
 
 export async function getStaticProps({ params }) {
   const datas = await getAllPosts(
     'pagesCollection',
     `
     items{
-      leadPrjsCollection(limit: 40){
-        items{
-          date
-          title
-          specImg{
-            url
+        leadNewsPageCollection(limit: 40){
+          items{
+            date
+            title
+            img{
+              url
+           }
+           info
+           profession
+           id
          }
-         specInfo
        }
      }
-   }
    `,
   )
 
   return {
     props: {
-      projects: datas,
+      news: datas,
       para: params !== undefined ? params : console.log('awaiting'),
     },
   }
@@ -107,20 +106,25 @@ export async function getStaticPaths() {
   const lnks = await getAllPostsWithId(
     'pagesCollection',
     `
-  items {
-    leadPrjsCollection {
-        items {
-         date
-         title
-         prjType
-         id
+    items{
+        leadNewsPageCollection(limit: 40){
+          items{
+            date
+            title
+            img{
+              url
+           }
+           info
+           profession
+           id
+         }
        }
-     } 
+     }
   `,
   )
 
   return {
-    paths: lnks === undefined ? [] : lnks[0]?.leadPrjsCollection?.items?.map((x) => `/projects/${x.id}`) ?? [],
+    paths: lnks === undefined ? [] : lnks[0]?.leadNewsPageCollection?.items?.map((x) => `/news/${x.id}`) ?? [],
     fallback: true,
   }
 }

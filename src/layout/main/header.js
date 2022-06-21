@@ -78,7 +78,7 @@ export const Header = () => {
                 Шийд
               </Typography>
             </AccordionDetailsWithLink>
-            <AccordionDetailsWithLink href="/news" isActive={link === '/news'}>
+            <AccordionDetailsWithLink href="/news/page" isActive={link === '/news/page'}>
               <Typography variant="body" className="text-onSurface-black-medium">
                 Мэдээ
               </Typography>
@@ -139,11 +139,11 @@ export const Header = () => {
             </a>
           </Link>
 
-          <Link href={'/news'}>
+          <Link href={'/news/page'}>
             <a>
               <div
                 className={`${
-                  link === '/news' && 'border-b-4 border-primary-main'
+                  link === '/news/page' && 'border-b-4 border-primary-main'
                 } py-[24px] shrink-0 hover:cursor-pointer`}
               >
                 <Typography variant="body">Мэдээ</Typography>

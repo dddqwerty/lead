@@ -1,5 +1,6 @@
 import { Typography } from 'components'
 import { motion } from 'framer-motion'
+import Image from 'next/image'
 import { handleIcon } from 'utils'
 
 export const Lead = ({ datas }) => {
@@ -57,7 +58,7 @@ export const Lead = ({ datas }) => {
               <Typography
                 className="underline cursor-pointer"
                 variant="Button / Link"
-                onClick={() => (window.location.href = 'https://www.facebook.com/LEADAlumniAssociation')}
+                onClick={() => window.open('https://www.facebook.com/LEADAlumniAssociation', '_blank')}
               >
                 Фэйсбүүк-рүү үсрэх
               </Typography>
@@ -84,91 +85,91 @@ export const Lead = ({ datas }) => {
           variants={item}
           transition={{ duration: 1.5 }}
         >
-          <img src={img[0].url} className="rounded-full" />
+          <Image src={img[0].url} className="rounded-full" alt="" width={93} height={93} />
         </motion.div>
         <motion.div
           className="w-[93px] h-[93px] absolute -top-[10px] left-[442px] rounded-full bg-bgGrey z-10  flex justify-center items-center"
           variants={item}
           transition={{ duration: 1.5 }}
         >
-          <img src={img[0].url} className="rounded-full" />
+          <Image src={img[0].url} className="rounded-full" alt="" width={93} height={93} />
         </motion.div>
         <motion.div
           className="w-[93px] h-[93px] absolute top-[160px] -left-[28px] rounded-full bg-bgGrey z-10  flex justify-center items-center"
           variants={item}
           transition={{ duration: 1.5 }}
         >
-          <img src={img[0].url} className="rounded-full" />
+          <Image src={img[0].url} className="rounded-full" alt="" width={93} height={93} />
         </motion.div>
         <motion.div
           className="w-[93px] h-[93px] absolute top-[160px] left-[617px] rounded-full bg-bgGrey z-10  flex justify-center items-center"
           variants={item}
           transition={{ duration: 1.5 }}
         >
-          <img src={img[0].url} className="rounded-full" />
+          <Image src={img[0].url} className="rounded-full" alt="" width={93} height={93} />
         </motion.div>
         <motion.div
           className="w-[93px] h-[93px] absolute top-[420px] -left-[28px] rounded-full bg-bgGrey z-10  flex justify-center items-center"
           variants={item}
           transition={{ duration: 1.5 }}
         >
-          <img src={img[0].url} className="rounded-full" />
+          <Image src={img[0].url} className="rounded-full" alt="" width={93} height={93} />
         </motion.div>
         <motion.div
           className="w-[93px] h-[93px] absolute top-[420px] left-[617px] rounded-full bg-bgGrey z-10  flex justify-center items-center"
           variants={item}
           transition={{ duration: 1.5 }}
         >
-          <img src={img[0].url} className="rounded-full" />
+          <Image src={img[0].url} className="rounded-full" alt="" width={93} height={93} />
         </motion.div>
         <motion.div
           className="w-[93px] h-[93px] absolute top-[610px] left-[162px] rounded-full bg-bgGrey z-10  flex justify-center items-center"
           variants={item}
           transition={{ duration: 1.5 }}
         >
-          <img src={img[0].url} className="rounded-full" />
+          <Image src={img[0].url} className="rounded-full" alt="" width={93} height={93} />
         </motion.div>
         <motion.div
           className="w-[93px] h-[93px] absolute top-[610px] left-[442px] rounded-full bg-bgGrey z-10  flex justify-center items-center"
           variants={item}
           transition={{ duration: 1.5 }}
         >
-          <img src={img[0].url} className="rounded-full" />
+          <Image src={img[0].url} className="rounded-full" alt="" width={93} height={93} />
         </motion.div>
         <motion.div
           className="w-[93px] h-[93px] absolute top-[90px] left-[297px] rounded-full bg-bgGrey z-10  flex justify-center items-center"
           variants={item}
           transition={{ duration: 1.5 }}
         >
-          <img src={img[0].url} className="rounded-full" />
+          <Image src={img[0].url} className="rounded-full" alt="" width={93} height={93} />
         </motion.div>
         <motion.div
           className="w-[93px] h-[93px] absolute top-[220px] left-[112px] rounded-full bg-bgGrey z-10  flex justify-center items-center"
           variants={item}
           transition={{ duration: 1.5 }}
         >
-          <img src={img[0].url} className="rounded-full" />
+          <Image src={img[0].url} className="rounded-full" alt="" width={93} height={93} />
         </motion.div>
         <motion.div
           className="w-[93px] h-[93px] absolute top-[220px] left-[472px] rounded-full bg-bgGrey z-10  flex justify-center items-center"
           variants={item}
           transition={{ duration: 1.5 }}
         >
-          <img src={img[0].url} className="rounded-full" />
+          <Image src={img[0].url} className="rounded-full" alt="" width={93} height={93} />
         </motion.div>
         <motion.div
           className="w-[93px] h-[93px] absolute top-[450px] left-[172px] rounded-full bg-bgGrey z-10  flex justify-center items-center"
           variants={item}
           transition={{ duration: 1.5 }}
         >
-          <img src={img[0].url} className="rounded-full" />
+          <Image src={img[0].url} className="rounded-full" alt="" width={93} height={93} />
         </motion.div>
         <motion.div
           className="w-[93px] h-[93px] absolute top-[450px] left-[412px] rounded-full bg-bgGrey z-10  flex justify-center items-center"
           variants={item}
           transition={{ duration: 1.5 }}
         >
-          <img src={img[0].url} className="rounded-full" />
+          <Image src={img[0].url} className="rounded-full" alt="" width={93} height={93} />
         </motion.div>
       </motion.div>
     </div>

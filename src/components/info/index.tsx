@@ -101,7 +101,7 @@ export const Information: FC = ({datas}: any): ReactElement => {
                     <Typography variant="body" className="flex flex-col leading-7 mt-5"> {data && data.info && read ? data.info.slice(0, 190) : data && data.info ? data.info : 'ret'}
                     <Typography variant="body" className="flex text-primary-main cursor-pointer" onClick={toggleRead}> {read ? 'Дэлгэрэнгүй' : 'Буцаах'} <img src="/static/arrow.svg" alt="" className="w-6 h-6 mt-1" /> </Typography> </Typography>
                 </div>
-                <div className="flex flex-col md:justify-end w-[288px]  md:ml-[130px] h-fit bg-[#F7F7F7]">
+                <div className="flex flex-col md:justify-end w-[288px]  md:ml-[130px] h-fit bg-[#F7F7F7] cursor-pointer">
                     <DetailedInfo name="info" onClick={option1}> <Typography variant="body" className="pointer-events-none"> Тайлбар </Typography> </DetailedInfo>
                     <div className="border-b-2"> </div>
                     <DetailedInfo name='info' onClick={option2}> <Typography variant="body" className="pointer-events-none"> Зорилго </Typography> </DetailedInfo>
