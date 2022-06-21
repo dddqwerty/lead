@@ -13,7 +13,6 @@ import Image from 'next/image'
 export const SpecDatas = ({ projects, para }) => {
   const [data, setData] = useState(null)
   const [id, setId] = useState(null)
-  console.log(projects, para)
 
   const theme = useTheme()
   const matches = useMediaQuery(theme.breakpoints.down('sm'))
