@@ -11,7 +11,7 @@ export const Accompany: FC = (): ReactElement => {
 
     const Option = (props: Props) => {
         return (
-            <div className="flex border-[#e6e6e6] border-solid border h-[100px] w-[334px] items-center rounded-[100px] shadow-[0px_4px_28px_rgba(9, 44, 76, 0.05)]">
+            <div className="flex border-[#e6e6e6] border-solid border h-[100px] w-[350px] items-center rounded-[100px] shadow-[0px_4px_28px_rgba(9, 44, 76, 0.05)]">
                 <div className="ml-8 pr-4"><Lottie height={40} width={40} options={defaultOptions} /></div>
                 <Typo variant="body-semibold">{props.name}</Typo>
             </div>
@@ -33,7 +33,7 @@ export const Accompany: FC = (): ReactElement => {
                 <Typo variant="body" className="leading-[27px]"> Хөтөлбөрт шалгарснаар цогц сургалтад хамрагдан манлайлах чадвараа сайжруулахын зэрэгцээ багаар төсөл хэрэгжүүлнэ. </Typo>
             </div>
             <div className="flex flex-row relative">
-                <div className="flex gap-[370px]">
+                <div className="flex gap-[350px]">
                     <div className="flex flex-col gap-[104px]">
                         <Option name="25-47 насны эерэг залуус" />
                         <Option name="Нийгэмдээ эерэг өөрчлөлтийг бий болгох" />

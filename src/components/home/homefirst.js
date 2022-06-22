@@ -27,7 +27,7 @@ export const HomeFirst = () => {
   const matches = useMediaQuery(theme.breakpoints.down('sm'))
 
   return (
-    <div className={`flex-row flex mx-auto py-12 max-w-leadScreen ${PADDINGX}`}>
+    <div className={`flex-row flex mx-auto py-12 max-w-leadScreen ${PADDINGX} w-full relative`}>
       <motion.div
         variants={container}
         initial="hidden"
@@ -76,7 +76,7 @@ export const HomeFirst = () => {
           </motion.div>
         </div>
       </motion.div>
-      <div className="w-[818px] h-[788.8px] hidden md:block absolute -top-[38px] left-[700px]">
+      <div className="w-[818px] hidden md:block absolute top-[2px] left-[550px]">
         <img src="/static/home1.jpg" />
       </div>
     </div>
