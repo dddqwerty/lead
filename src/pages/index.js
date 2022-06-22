@@ -9,33 +9,52 @@ import Landpage from 'components/landpages/land'
 import Support from 'components/oursup'
 import { PADDINGX } from 'constants/layout'
 import { getAllPosts } from './posts/fetch'
+import Head from 'next/head'
 
 export const Home = ({ fs, sc, thrd }) => {
   const { setLink } = useAppContext()
 
   return (
-    <MainLayout>
-      <HomeFirst />
-      <HomeSecond datas={fs} />
-      <div className="mt-9">
-        <div className="md:mt-[380px]">
-          <Landpage className="mx-auto max-w-leadScreen" />
+    <>
+      <Head>
+        <title>LEAD</title>
+        <meta name="title" content="LEAD" />
+        <meta name="description" content="Website for Lead Alumni Association" />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://metatags.io/" />
+        <meta property="og:title" content="LEAD" />
+        <meta property="og:description" content="Website for Lead Alumni Association" />
+        <meta property="og:image" content="/static/lead.png" />
+        <meta property="twitter:card" content="summary_large_image" />
+        <meta property="twitter:url" content="https://metatags.io/" />
+        <meta property="twitter:title" content="LEAD" />
+        <meta property="twitter:description" content="Website for Lead Alumni Association" />
+        <meta property="twitter:image" content="/static/lead.png" />
+      </Head>
+
+      <MainLayout>
+        <HomeFirst />
+        <HomeSecond datas={fs} />
+        <div className="mt-9">
+          <div className="md:mt-[380px]">
+            <Landpage className="mx-auto max-w-leadScreen" />
+          </div>
+          <GridMain datas={sc} />
+          <div className="flex justify-center mt-[64px]">
+            <Button
+              variant="ghost"
+              onClick={() => {
+                router.push(`/projects`), setLink('projects')
+              }}
+            >
+              Дэлгэрэнгүй
+            </Button>
+          </div>
+          <News datas={thrd} />
+          <Support className={PADDINGX} />
         </div>
-        <GridMain datas={sc} />
-        <div className="flex justify-center mt-[64px]">
-          <Button
-            variant="ghost"
-            onClick={() => {
-              router.push(`/projects`), setLink('projects')
-            }}
-          >
-            Дэлгэрэнгүй
-          </Button>
-        </div>
-        <News datas={thrd} />
-        <Support className={PADDINGX} />
-      </div>
-    </MainLayout>
+      </MainLayout>
+    </>
   )
 }
 
